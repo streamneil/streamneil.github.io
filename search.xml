@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>filter-interceptor</title>
+    <url>/2019/11/26/filter-interceptor/</url>
+    <content><![CDATA[<h1 id="Filter和Interceptor的使用和区别"><a href="#Filter和Interceptor的使用和区别" class="headerlink" title="Filter和Interceptor的使用和区别"></a>Filter和Interceptor的使用和区别</h1>]]></content>
+      <categories>
+        <category>微服务</category>
+        <category>SpringCloud</category>
+        <category>网关</category>
+      </categories>
+      <tags>
+        <tag>SpringBoot</tag>
+        <tag>SpringCloud</tag>
+        <tag>Filter</tag>
+        <tag>Interceptor</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>自己的能量场</title>
     <url>/2019/11/25/zhixingli-1/</url>
     <content><![CDATA[<h1 id="自己的能量场"><a href="#自己的能量场" class="headerlink" title="自己的能量场"></a>自己的能量场</h1><p>最近一段时间最深刻的是<code>改变</code>，如何改变?<br>说的太多的：通过学习，不断地去深刻反思、勇敢地去暴露自己问题并去改变它。有时会问自己：『我改变了，有用吗？』答案是：不知道。但是你知道的是：你成长的是你自己。不要在乎其他人的眼光了。但是这样够吗？</p>
