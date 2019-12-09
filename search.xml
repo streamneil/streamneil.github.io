@@ -18,7 +18,7 @@
 <li>应用获取access_token缓存起来，再次请求时带上access_token；</li>
 <li>网关接受到access_token，去redis获取jwt并校验；</li>
 <li>网关之后的服务直接鉴权都实用jwt；</li>
-<li>如果需要实时清楚jwt，则在网关处去校验授权是否合法，清楚redis即可；</li>
+<li>如果需要实时清楚jwt，则在网关处去校验授权是否合法，清除redis即可；</li>
 </ol>
 ]]></content>
       <categories>
