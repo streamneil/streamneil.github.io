@@ -11,7 +11,15 @@
 <h2 id="解决方式"><a href="#解决方式" class="headerlink" title="解决方式"></a>解决方式</h2><blockquote>
 <p>要解决上述的问题，本身有很多方案，下面就简单实用redis来说明解决方案。</p>
 </blockquote>
-<p><img src="j-r-a.jpg" alt=""></p>
+<p><img src="j-r-a.png" alt=""></p>
+<ol>
+<li>授权服务器接收到应用请求，去用户表获取授权信息；</li>
+<li>根据业务，生成jwt换成到redis，并返回redis 换的key（32或64位）；</li>
+<li>应用获取access_token缓存起来，再次请求时带上access_token；</li>
+<li>网关接受到access_token，去redis获取jwt并校验；</li>
+<li>网关之后的服务直接鉴权都实用jwt；</li>
+<li>如果需要实时清楚jwt，则在网关处去校验授权是否合法，清楚redis即可；</li>
+</ol>
 ]]></content>
       <categories>
         <category>微服务</category>
