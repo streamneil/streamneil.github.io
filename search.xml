@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CoreJava(一)-如何给别人讲述下你所理解的Java平台？</title>
+    <url>/2019/12/12/corejava-1/</url>
+    <content><![CDATA[<p>2010年开始接触java，2011年9月开始转到Android，接触java那么久，现在公司随着业务发展需要新团队技术栈选型使用Java，团队中有些后端是从PHP、Python转过来的，也有些是新入职的。基于以上，决定把之前的CoreJava再次系统梳理下，做一个专题进行持续分享。</p>
+<p>好了，回到我们的分享的课题。</p>
+<p>本身这是一个开放的命题，也是本身也是为了给那些从其他语言转过来的小伙伴起个抛砖引玉引导其探索的分享，就从自己认知说起。</p>
+<p>Java，对其第一反应有哪些？面向对象、垃圾回收、JVM、JDK、JRE、JAVAC、跨平台、面向对象、反射、泛型… 还有java周边生态、工具等等</p>
+<h3 id="Java两个显著特征"><a href="#Java两个显著特征" class="headerlink" title="Java两个显著特征"></a>Java两个显著特征</h3><ol>
+<li>跨平台能力（Write Once, Run AnyWhere）；</li>
+<li>垃圾回收（GC）；</li>
+</ol>
+<p>思考题：为何Java有跨平台能力？</p>
+<h3 id="Java是解释执行的？"><a href="#Java是解释执行的？" class="headerlink" title="Java是解释执行的？"></a>Java是解释执行的？</h3><p>对于Java是解释型语言还是编译型语言，大家可以参考 <a href="https://blog.csdn.net/qzc70919700/article/details/72515022" target="_blank" rel="noopener">Java到底是编译型语言还是解释型语言？</a> 这篇文章，个人认为分析的还是很容易懂的(本身就很好懂好吧~)。<br>基于此文结论：java是解释型语言，是否就可以理解java是解释执行的呢？为什么呢？可能好多人都对这个有疏忽，个人分析如下（知识有限，如回答有误私聊赐教）：</p>
+<ol>
+<li>我们编写的java源文件通过javac编译成字节码，然后jvm的解释器将字节码转换成最终可被识别的机器码。</li>
+<li>我们常见JVM（如<a href="https://zh.wikipedia.org/wiki/HotSpot" target="_blank" rel="noopener">HotSpot</a>），是用JIT技术（Just-in-time compilation）。通常，程序有两种运行方式：静态编译与动态解释。静态编译的程序在执行前全部被翻译为机器码，而解释执行的则是一句一句边运行边翻译。JIT是包含两者，对于大部分代码JVM会采用动态编译，但是JIT会对java的热点代码编译成机器码，对于这部分已经编译成机器码的热点代码它们就不是解释执行了，可以看作编译执行，这或许就是JIT的能提高程序运行效率所在吧。<br>3.</li>
+</ol>
+<h3 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h3><p>JVM本身是一个非常强大的平台，不仅java能运行在上面，本质上只要是标准的字节码都能在上面运行。比如：Groovy（其他的如Jython，JRuby没玩过）；</p>
+<p>由于我们不是专门去详细介绍JVM，而是针对部门的系列分享，不可能吧JVM在这边梳理的那么清晰，当然网络上这部分资料也很多。<br>推荐：周志明的《深入理解Java虚拟机》这本书，由浅入深的讲述的应该比较好，个人对此深入不够，后面也会专门对这块恶补。<br>但是，建议学习java还是要对jvm的基本概念和机制有所了解。比如：java的类加载机制，常见的jdk8中的class-loader。class的大致过程：加载、验证、链接、初始化；对自定义classloader有所了解，即使在实际项目中可能用不到；<br>垃圾回收原理，常见的垃圾回收器：SGC、PGC、CMS、G1等，</p>
+<h3 id="JRE-amp-JDK"><a href="#JRE-amp-JDK" class="headerlink" title="JRE&amp;JDK"></a>JRE&amp;JDK</h3><p>JRE（Java Runtime Environment），包含了java类库和jvm，和一些其需要的模块。<br>JDK（Java Development Kit），我们可以把jdk看作成jre的超级，其提供了更多的工具，比如编译器、各种诊断工具，例如：javac，jmap，jstack等。</p>
+<p>进行java开发，对jdk要充分熟悉，就像做android开发要非常熟悉sdk一样。大致：编译器、安全工具、运行环境、诊断和监控工具等；都是是后续开发效率提升的保证。不只是android，其他语言如Python、PHP也一个道理。</p>
+<h3 id="Java知识图谱"><a href="#Java知识图谱" class="headerlink" title="Java知识图谱"></a>Java知识图谱</h3><p>上面罗列了一些名词，只是别人刚问你java平台啥，我们可能的第一反应，但是要想有更全面的知识覆盖，建议每个人都去画下java的图谱，我也会在后面慢慢补上我自己的，然后分享出来。</p>
+<hr>
+<p>今天只是粗略的分享了java平台大致的样子，不求对细节理解多深入，但要求对文中提到的店还是要下点功夫。</p>
+<p>总结：java语言特性、核心类库、第三方类库、jvm；</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JWT结合Redis实现授权认证方案</title>
     <url>/2019/12/09/jwt-redis-auth/</url>
     <content><![CDATA[<h2 id="JWT原理"><a href="#JWT原理" class="headerlink" title="JWT原理"></a>JWT原理</h2><p>JWT我们都很清楚了，在实战中不止一次使用。其原理简单描述就是：认证服务器吧一串json加密之后返回给应用，就像这样：</p>
