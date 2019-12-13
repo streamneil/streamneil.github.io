@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://www.neilli.cn/2019/12/12/corejava-1/</loc>
+    <loc>http://www.neilli.cn/2019/12/13/corejava-3-int/</loc>
     <lastmod>2019-12-13</lastmod>
   </url>  <url>
     <loc>http://www.neilli.cn/2019/12/12/corejava-2-string/</loc>
+    <lastmod>2019-12-13</lastmod>
+  </url>  <url>
+    <loc>http://www.neilli.cn/2019/12/12/corejava-1/</loc>
     <lastmod>2019-12-13</lastmod>
   </url>  <url>
     <loc>http://www.neilli.cn/2019/11/25/zhixingli-1/</loc>
