@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CoreJava(四)-final深入解析</title>
+    <url>/2019/12/14/corejava-4-final/</url>
+    <content><![CDATA[<p>前面章节中，我们详细讲了<code>String</code>、<code>int和Integer原始数据类型</code></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CoreJava(三)-原始数据类型之int</title>
     <url>/2019/12/13/corejava-3-int/</url>
     <content><![CDATA[<p>学过Python的都知道，Python也是一个面向对象的语言，Python也号称<code>一切皆对象</code>，因为其类、函数都可以看做成对象，其也没有像Java中原始数据类型的概念。所以，从这个角度看，Python的对象化比Java更彻底。</p>
@@ -109,8 +121,8 @@
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>JVM</tag>
         <tag>线程安全</tag>
+        <tag>JVM</tag>
       </tags>
   </entry>
   <entry>
