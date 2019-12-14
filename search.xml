@@ -36,7 +36,7 @@
 <li>class的所有的成员变量都是private final类型的，而且不能实现<code>setter</code>方法，也最好不要实现<code>getter</code>方法；</li>
 <li>构造对象时，变量使用深拷贝而不是使用直接赋值；</li>
 </ol>
-<p>参考阅读：<a href="https://juejin.im/post/5de7237a518825125015cd6d" target="_blank" rel="noopener">Java 浅拷贝、深拷贝，你知多少？</a></p>
+<h2 id="知识扩展"><a href="#知识扩展" class="headerlink" title="知识扩展"></a>知识扩展</h2><p>参考阅读：<a href="https://juejin.im/post/5de7237a518825125015cd6d" target="_blank" rel="noopener">Java 浅拷贝、深拷贝，你知多少？</a></p>
 <p>好了，final就到这里吧。<br>后面的实际工作当中我们用到它的机会还有很多很多，比如在匿名内部类里面引用局部变量时，其必须是final类型的等等；</p>
 <p>到时候我们再专门讲吧。</p>
 ]]></content>
