@@ -3,7 +3,7 @@
   <entry>
     <title>CoreJava(六)-谈谈你对Map的掌握</title>
     <url>/2019/12/17/corejava-6-map/</url>
-    <content><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>上一节我们详细分析的集合，由于集合篇幅较长，我们吧<code>Map</code>单独拎出来分析下吧。也是由于从严格意义上说<code>Map</code>不能看出集合，但它又和集合有着很多联系。</p>
+    <content><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>上一节我们详细分析的集合，由于集合篇幅较长，我们吧<code>Map</code>单独拎出来分析下吧。也是由于从严格意义上说<code>Map</code>不能看出集合，但它又和集合有着很多联系，感觉有必要着重讲下。</p>
 <h2 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h2><p>讲<code>HashMap</code>之前我们先大致了解下<code>红黑树</code>。</p>
 <p><strong>什么是红黑树?</strong></p>
 <p>简答来说其就二叉树的一种形式，不过其比二叉树更<code>智能</code>。它能左右平衡节点的数量，尽量保证树的高度差不多，所以红黑树的特点：</p>
