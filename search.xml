@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>corejava-7-concurrent</title>
+    <title>CoreJava(7) - 从ConcurrentHashMap谈线程安全</title>
     <url>/2019/12/22/corejava-7-concurrent/</url>
     <content><![CDATA[]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>线程安全</tag>
+      </tags>
   </entry>
   <entry>
     <title>CoreJava(六)-谈谈你对Map的掌握-Java Map 源码分析</title>
