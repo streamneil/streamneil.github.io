@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://neilli.cn/"/>
-  <updated>2020-01-02T09:38:04.355Z</updated>
+  <updated>2020-04-09T07:54:04.709Z</updated>
   <id>https://neilli.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>软件开发-版本号管理</title>
+    <link href="https://neilli.cn/2020/04/09/version-rule/"/>
+    <id>https://neilli.cn/2020/04/09/version-rule/</id>
+    <published>2020-04-09T07:48:50.000Z</published>
+    <updated>2020-04-09T07:54:04.709Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="版本号管理规范"><a href="#版本号管理规范" class="headerlink" title="版本号管理规范"></a>版本号管理规范</h1><table><thead><tr><th style="text-align:center">编号</th><th style="text-align:center">说明</th><th style="text-align:center">版本号</th><th style="text-align:center">修订人</th><th style="text-align:center">日期</th></tr></thead><tbody><tr><td style="text-align:center">01</td><td style="text-align:center">全文</td><td style="text-align:center">1.0</td><td style="text-align:center">neil</td><td style="text-align:center">2019.04.09</td></tr><tr><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr><tr><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr></tbody></table><p><a name="FaPKF"></a></p><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>中台部门是一个公司的重要支撑部门，我们的服务能力要被各团队使用。所以，提供一个规范、可读性较强的版本号能很大程度减少关于Api版本号上的沟通，也更好的能针对特定版本的问题进行排查和沟通。<br><a name="a2cGK"></a></p><h1 id="命名格式"><a href="#命名格式" class="headerlink" title="命名格式"></a>命名格式</h1><p>项目版本号命名格式：<code>2.0.1.20200409_r2ae631e</code>，依次为：<code>主版本号</code>.<code>次版本号</code>.<code>发布版本号</code>.<code>日期</code> _ <code>希腊字母版本号</code> <code>git commit id</code><br></p><p><a name="XrbKJ"></a></p><h1 id="详细说明"><a href="#详细说明" class="headerlink" title="详细说明"></a>详细说明</h1><table><thead><tr><th style="text-align:center">名词</th><th style="text-align:center">详细说明</th></tr></thead><tbody><tr><td style="text-align:center">主版本号</td><td style="text-align:center"><code>里程碑</code>版本号，只有每次发布<code>里程碑</code>版本时才会改变</td></tr><tr><td style="text-align:center">次版本号</td><td style="text-align:center"><code>里程碑</code>版本号，只有每次发布<code>里程碑</code>版本时才会改变</td></tr><tr><td style="text-align:center">发布版本号</td><td style="text-align:center">每次更新时，在<code>里程碑</code>版本内，固定加1</td></tr><tr><td style="text-align:center">日期</td><td style="text-align:center">记录日期</td></tr><tr><td style="text-align:center">希腊字母版本号</td><td style="text-align:center"><code>希腊字母版本号</code>只有：<code>alpha</code>,<code>beta</code>,<code>pre</code>,<code>release</code>,<code>stable</code>，发布时分别对应<code>a</code>,<code>b</code>,<code>p</code>,<code>r</code>,<code>s</code>。<code>里程碑</code>版本发布前，内测版<code>希腊字母版本号</code>是<code>a</code>，公测是<code>b</code>，预发布是<code>p</code>,各个版本发布时是<code>r</code>，稳定版发布时是<code>s</code>，一般很少用。</td></tr><tr><td style="text-align:center">git commit id</td><td style="text-align:center">每次git提交时的id，发布时取当前最新的id的<code>前7位</code></td></tr></tbody></table><p><a name="N2sh2"></a></p><h1 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h1><ul><li>以上规则适用于中台所有项目。</li><li><code>主版本号</code>.<code>次版本号</code>.<code>发布版本号</code>，在发布版本时，前面一位版本号改变时，后面版本号自动归<code>0</code>。</li><li><code>希腊字母版本号</code>，对于<code>a</code>版本，一般是开发者开发测试版本，一般不需要测试参与；<code>b</code>版本需要测试人员测试或公测。</li><li><strong>客户端显示只显示前3位版本号</strong>，即<code>主版本号</code>.<code>次版本号</code>.<code>发布版本号</code>。点击击版本号时，客户端弹出Dialog提示出详细版本信息，也可以根据各自开发、调试需要增加其他额外的详细信息。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      目前在负责公司微服务改造&amp;中台化建设，众多微服务的发布的版本号需要统一约束，故制定版本号管理规范，旨在减少不同部门对于Api和服务版本号的沟通，更让其具有一定可读性。
+    
+    </summary>
+    
+    
+      <category term="中台" scheme="https://neilli.cn/categories/%E4%B8%AD%E5%8F%B0/"/>
+    
+    
+      <category term="git" scheme="https://neilli.cn/tags/git/"/>
+    
+      <category term="版本管理" scheme="https://neilli.cn/tags/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>CoreJava(7) - 从ConcurrentHashMap谈线程安全</title>
