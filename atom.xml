@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://neilli.cn/"/>
-  <updated>2020-05-09T09:48:46.837Z</updated>
+  <updated>2020-05-09T09:54:36.646Z</updated>
   <id>https://neilli.cn/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>CoreJava(7) - 谈谈 Java 的接口和抽象类</title>
+    <title>CoreJava(8) - 谈谈 Java 的接口和抽象类</title>
     <link href="https://neilli.cn/2020/05/09/corejava-8-ci/"/>
     <id>https://neilli.cn/2020/05/09/corejava-8-ci/</id>
     <published>2020-05-09T02:47:16.000Z</published>
-    <updated>2020-05-09T09:48:46.837Z</updated>
+    <updated>2020-05-09T09:54:36.646Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>面向对象和核心就是继承、多态、封装，而接口和抽象类就是它的2个基本的机制。</p><h1 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h1><h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><ul><li>它是抽象方法的集合，利用它可以很好的事项 API 和实现的分离；</li><li>不能实例化；</li><li>&lt;= Java8 不能有函数实现；</li><li>常亮只能是 public static final;</li><li>只能被实现；</li></ul><h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><ul><li>不能实例化；</li><li>只能被继承；</li><li>可以有抽象方法和非抽象方法；</li></ul><h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><p>Java 相比于 C++ 其继承是不能多继承的。所以，有了这个局限性，我们在设计的时候，可以使用实现多个接口来达到多继承的目的。</p><p>Java 单继承陷阱：<br>设想下，如何在某些场景下，如果使用抽象类来抽象出基础逻辑，由于 Java 只能单继承，随时业务扩展，基类抽象的能力越来越多，导致某些<br>实现类不得不要去实现或空实现更多与自己无关的方法；</p><p>但是，如果使用接口，我们又可以设想下，如果能力都是用接口来定义，那么具体实现类要去实现接口定义的所有的方法，否则编译会出错；而此时如果我们<br>使用抽象类，里面的方法采用非抽象方法，那么子类就可以不用全部实现这些方法，只要按需重载即可。可见，这2者的选择是要自己根据自己的设计去抉择的。</p><p>在实际的工作当中，我们可以发现接口其实往往不仅仅是定义一些方法的集合。有些接口他一个方法都没有，就是一个空接口。那这类空接口是用来干啥的呢？</p><p>所以，它看起来和Annotation差不多吧。【思考：如何写个注解？】 但是Annotation可以指定参数和值，在表达能力上更易让程序员理解，可读性、美观上比较好，所以，大家更倾向于选择使用Annotation。</p><h1 id="Annotation"><a href="#Annotation" class="headerlink" title="Annotation"></a>Annotation</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * @author neil</span><br><span class="line"> */</span><br><span class="line">@Documented</span><br><span class="line">@Constraint(validatedBy = MobileValidator.class)</span><br><span class="line">@Target(&#123;ElementType.FIELD, ElementType.PARAMETER&#125;)</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="line">public @interface Mobile &#123;</span><br><span class="line"></span><br><span class="line">    String message() default &quot;Invalid Mobile, &quot;;</span><br><span class="line"></span><br><span class="line">    Class[] groups() default &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    Class[] payload() default &#123;&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>上面就是定义个Mobile注解，用来 check 手机号是否合法的。具体各个字段的意义，大家自行了解。</p><h1 id="基本原则"><a href="#基本原则" class="headerlink" title="基本原则"></a>基本原则</h1><p>面向对象编程，必须要了解的设计中的基本原则（SOLID）：</p><ul><li>单一原则<ul><li>一个类只有单一职责</li></ul></li><li>开关原则<ul><li>修改关闭、扩展开放</li></ul></li><li>里氏替换<ul><li>凡是用来父类或基类的，都可以用子类替换之；</li></ul></li><li>接口分离<ul><li>接口不能定义太快方法，不然其子类就回陷入困难。因为它要实现此接口就必须实现此接口定义的与自己无关的方法。所以，在程序设计的时候，要把功能拆分成单一功能的多个接口，子类按需去实现不同接口。当某个单一功能的接口需要扩充是，则不会影响其他的接口和子类。</li></ul></li><li>依赖反转<ul><li>又叫依赖倒置，实体不能依赖实现，要依赖抽象。要面向抽象编程不能面向实现编程。</li></ul></li></ul><h2 id="依赖反转"><a href="#依赖反转" class="headerlink" title="依赖反转"></a>依赖反转</h2><p>比较难理解就是依赖反转了。其实我们都知道，简单举个例子。我们有个支付功能。有个实体类要用到支付功能，所以，它不能与AliPay或WxPay有依赖，要把支付抽象成PayInterface，AliPay和WxPay实现此接口，具体类要去和PayInterface有依赖关系即可。是不是很简单。这往往是面试中很多人不答不上来的。</p><p>在扩展一点还有【控制反转】【依赖注入】，后面我们学Spring的时候再深入吧。</p>]]></content>
     

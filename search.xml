@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CoreJava(7) - 谈谈 Java 的接口和抽象类</title>
+    <title>CoreJava(8) - 谈谈 Java 的接口和抽象类</title>
     <url>/2020/05/09/corejava-8-ci/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>面向对象和核心就是继承、多态、封装，而接口和抽象类就是它的2个基本的机制。</p>
 <h1 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h1><h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><ul>
