@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CoreJava(8) - 谈谈 Java JVM（一）</title>
+    <title>CoreJava(9) - 谈谈 Java JVM（一）</title>
     <url>/2020/05/14/corejava-9-jvm1/</url>
     <content><![CDATA[<p>我们都知道 Java 里面有垃圾回收，有了它，我们在码 Java 代码的时候确实省了不少事情。但是，如果我们仅仅停留在让垃圾回收来给我们管理我们的内存的话，那我们的只能写出一般般的程序。所以，如果想要能设计高扩展性以及对性能和内存调优有更好要求的小伙伴来说，熟悉 JVM 及其内存结果和工作机制，是必不可少的。</p>
 <h1 id="内存区域"><a href="#内存区域" class="headerlink" title="内存区域"></a>内存区域</h1><h2 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h2><p>又称PC寄存器（Program Counter Register）。在 JVM 中每个线程都有一个程序计数器。那为什么每个线上都要有这么一个计数器呢？弄清这个问题，首先我们要先想下在 JVM 多线程内部机制是怎样的？ 多线程，它不是这些线程同时在执行，而是同时只有1个线程在执行，通过线程轮流切换来获得 CPU 的执行时间。线程在执行的时候（也就是 CPU 执行指令时），它就是从当前线程的 PCG(Program Counter Register) 中来获取当前需要执行 JVM 指令的地址的。</p>
@@ -40,6 +40,7 @@
       </categories>
       <tags>
         <tag>Java</tag>
+        <tag>JVM</tag>
         <tag>内存</tag>
       </tags>
   </entry>
