@@ -90,7 +90,7 @@
 
 
 
-  <meta name="keywords" content="微服务,JWT,Redis,">
+  <meta name="keywords" content="JVM、内存、垃圾回收">
 
 
 
@@ -103,20 +103,18 @@
 
 
 
-<meta name="description" content="JWT原理JWT我们都很清楚了，在实战中不止一次使用。其原理简单描述就是：认证服务器吧一串json加密之后返回给应用，就像这样： 12345&amp;#123;  &quot;id&quot;: &quot;230012&quot;,  &quot;name&quot;: &quot;neilli&quot;,  &quot;exprie_data&quot;: 1516239022&amp;#125; 加密之后：1eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI">
-<meta name="keywords" content="微服务,JWT,Redis">
+<meta name="description" content="这段时间中台的 Java 服务正式运行了，但是遇到些问题，不时有的服务会停止；或者有的 PHP 服务的心跳不正常，所以，从 Java 服务角度，是要看下其内存的使用情况，也是排查问题手段之一吧。所以，趁机梳理和归纳了监控和诊断 JVM 内存的工具和方法，以供部门人员日后学习。">
+<meta name="keywords" content="JVM、内存、垃圾回收">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JWT结合Redis实现授权认证方案">
-<meta property="og:url" content="https://neilli.cn/2019/12/09/jwt-redis-auth/index.html">
+<meta property="og:title" content="CoreJava(10） - 谈谈 Java JVM（二）">
+<meta property="og:url" content="https://neilli.cn/2020/06/01/corejava-10-jvm2/index.html">
 <meta property="og:site_name" content="Neil">
-<meta property="og:description" content="JWT原理JWT我们都很清楚了，在实战中不止一次使用。其原理简单描述就是：认证服务器吧一串json加密之后返回给应用，就像这样： 12345&amp;#123;  &quot;id&quot;: &quot;230012&quot;,  &quot;name&quot;: &quot;neilli&quot;,  &quot;exprie_data&quot;: 1516239022&amp;#125; 加密之后：1eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI">
+<meta property="og:description" content="这段时间中台的 Java 服务正式运行了，但是遇到些问题，不时有的服务会停止；或者有的 PHP 服务的心跳不正常，所以，从 Java 服务角度，是要看下其内存的使用情况，也是排查问题手段之一吧。所以，趁机梳理和归纳了监控和诊断 JVM 内存的工具和方法，以供部门人员日后学习。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://neilli.cn/2019/12/09/jwt-redis-auth/j-r-a.png">
-<meta property="og:updated_time" content="2020-06-03T09:24:54.987Z">
+<meta property="og:updated_time" content="2020-07-15T01:51:25.175Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JWT结合Redis实现授权认证方案">
-<meta name="twitter:description" content="JWT原理JWT我们都很清楚了，在实战中不止一次使用。其原理简单描述就是：认证服务器吧一串json加密之后返回给应用，就像这样： 12345&amp;#123;  &quot;id&quot;: &quot;230012&quot;,  &quot;name&quot;: &quot;neilli&quot;,  &quot;exprie_data&quot;: 1516239022&amp;#125; 加密之后：1eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI">
-<meta name="twitter:image" content="https://neilli.cn/2019/12/09/jwt-redis-auth/j-r-a.png">
+<meta name="twitter:title" content="CoreJava(10） - 谈谈 Java JVM（二）">
+<meta name="twitter:description" content="这段时间中台的 Java 服务正式运行了，但是遇到些问题，不时有的服务会停止；或者有的 PHP 服务的心跳不正常，所以，从 Java 服务角度，是要看下其内存的使用情况，也是排查问题手段之一吧。所以，趁机梳理和归纳了监控和诊断 JVM 内存的工具和方法，以供部门人员日后学习。">
 
 
 
@@ -150,7 +148,7 @@
 
 
 
-  <title>JWT结合Redis实现授权认证方案 | Neil</title>
+  <title>CoreJava(10） - 谈谈 Java JVM（二） | Neil</title>
   
 
 
@@ -341,7 +339,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://neilli.cn/2019/12/09/jwt-redis-auth/">
+    <link itemprop="mainEntityOfPage" href="https://neilli.cn/2020/06/01/corejava-10-jvm2/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="stream.neil@gmail.com">
@@ -358,7 +356,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JWT结合Redis实现授权认证方案</h1>
+          <h1 class="post-title" itemprop="name headline">CoreJava(10） - 谈谈 Java JVM（二）</h1>
         
 
         <div class="post-meta">
@@ -370,8 +368,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-09T18:39:55+08:00">
-                2019-12-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-01T00:32:40+08:00">
+                2020-06-01
               </time>
             
 
@@ -393,8 +391,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/微服务/" itemprop="url" rel="index">
-                    <span itemprop="name">微服务</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -410,7 +408,7 @@
 
           
           
-             <span id="/2019/12/09/jwt-redis-auth/" class="leancloud_visitors" data-flag-title="JWT结合Redis实现授权认证方案">
+             <span id="/2020/06/01/corejava-10-jvm2/" class="leancloud_visitors" data-flag-title="CoreJava(10） - 谈谈 Java JVM（二）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -429,6 +427,10 @@
           
 
           
+              <div class="post-description">
+                  这段时间中台的 Java 服务正式运行了，但是遇到些问题，不时有的服务会停止；或者有的 PHP 服务的心跳不正常，所以，从 Java 服务角度，是要看下其内存的使用情况，也是排查问题手段之一吧。所以，趁机梳理和归纳了监控和诊断 JVM 内存的工具和方法，以供部门人员日后学习。
+              </div>
+          
 
         </div>
       </header>
@@ -443,25 +445,20 @@
       
 
       
-        <h2 id="JWT原理"><a href="#JWT原理" class="headerlink" title="JWT原理"></a>JWT原理</h2><p>JWT我们都很清楚了，在实战中不止一次使用。其原理简单描述就是：认证服务器吧一串json加密之后返回给应用，就像这样：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"id"</span>: <span class="string">"230012"</span>,</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"neilli"</span>,</span><br><span class="line">  <span class="attr">"exprie_data"</span>: <span class="number">1516239022</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>加密之后：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIzMDAxMiIsIm5hbWUiOiJuZWlsbGkiLCJleHByaWVfZGF0YSI6MTUxNjIzOTAyMn0.WXgPJeoK89bzR1gWPVRe_mAz91TOzMqVMcv4wAbulew</span><br></pre></td></tr></table></figure></p>
-<p>应用获取加密后数据之后，再次请求服务的生活带上上述加密的字符串即可。服务端根据秘钥去获取用户认证的身份。这样服务端就不需要保持<code>session</code>了，也就是说服务的变成了无状态的了，从而比较容易实现扩展；</p>
-<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>JWT之所以是无状态的，就是其用户身份只根据上面的秘钥来确定，也就是一旦<code>令牌</code>签发，则其就不受服务端控制，其消亡只能根据<code>令牌</code>本身的过期时间来控制，这样对于有一些实时性要求的系统来说是不可行的。</p>
-<h2 id="解决方式"><a href="#解决方式" class="headerlink" title="解决方式"></a>解决方式</h2><blockquote>
-<p>要解决上述的问题，本身有很多方案，下面就简单实用redis来说明解决方案。</p>
-</blockquote>
-<p><img src="j-r-a.png" alt=""></p>
-<ol>
-<li>授权服务器接收到应用请求，去用户表获取授权信息；</li>
-<li>根据业务，生成jwt换成到redis，并返回redis 换的key（32或64位）；</li>
-<li>应用获取access_token缓存起来，再次请求时带上access_token；</li>
-<li>网关接受到access_token，去redis获取jwt并校验；</li>
-<li>网关之后的服务直接鉴权都实用jwt；</li>
-<li>如果需要实时清楚jwt，则在网关处去校验授权是否合法，清除redis即可；</li>
-</ol>
-<hr>
-<p>PS: 细心的小伙伴还发现了<code>认证服务器</code>是单独的，这个根据自己实际业务决定。</p>
+        <p>如何关键 JVM 堆内存的使用情况，成了我们日常排查问题很重要的手段。大致如下：</p>
+<ul>
+<li>JConsole、VisualM 它们是直接连接 Java 进程，然后在图形化界面掌握内存情况。</li>
+<li>jstat、jmap命令行工具进行查询；</li>
+<li>GC 日志；</li>
+<li>NMT（堆外内存的直接内存）；</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-XX:NativeMemoryTracking=summary</span><br></pre></td></tr></table></figure>
+<p>默认是关闭。</p>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><h3 id="堆外内存"><a href="#堆外内存" class="headerlink" title="堆外内存"></a>堆外内存</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>内存对象分配在JVM中堆以外的内存，也可以称为直接内存，这些内存直接受操作系统管理（而不是JVM），这样做的好处是能够在一定程度上减少垃圾回收对应用程序造成的影响。一般我们使用Unsafe和NIO包下ByteBuffer来创建堆外内存。</p>
+<h4 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h4><ul>
+<li>减少 GC</li>
+<li>提高 IO 效率</li>
+</ul>
 
       
     </div>
@@ -487,11 +484,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/微服务/" rel="tag">☭ 微服务</a>
+            <a href="/tags/Java/" rel="tag">☭ Java</a>
           
-            <a href="/tags/JWT/" rel="tag">☭ JWT</a>
+            <a href="/tags/内存诊断/" rel="tag">☭ 内存诊断</a>
           
-            <a href="/tags/Redis/" rel="tag">☭ Redis</a>
+            <a href="/tags/JVM/" rel="tag">☭ JVM</a>
           
         </div>
       
@@ -504,8 +501,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/26/filter-interceptor/" rel="next" title="弄懂SpringBoot中过滤器、拦截器、监听器">
-                <i class="fa fa-chevron-left"></i> 弄懂SpringBoot中过滤器、拦截器、监听器
+              <a href="/2020/05/14/corejava-9-jvm1/" rel="next" title="CoreJava(9) - 谈谈 Java JVM（一）">
+                <i class="fa fa-chevron-left"></i> CoreJava(9) - 谈谈 Java JVM（一）
               </a>
             
           </div>
@@ -513,10 +510,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/12/12/corejava-1/" rel="prev" title="CoreJava(一)-如何给别人讲述下你所理解的Java平台？">
-                CoreJava(一)-如何给别人讲述下你所理解的Java平台？ <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -662,7 +655,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JWT原理"><span class="nav-number">1.</span> <span class="nav-text">JWT原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遇到的问题"><span class="nav-number">2.</span> <span class="nav-text">遇到的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方式"><span class="nav-number">3.</span> <span class="nav-text">解决方式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#扩展"><span class="nav-number">1.</span> <span class="nav-text">扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#堆外内存"><span class="nav-number">1.1.</span> <span class="nav-text">堆外内存</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义"><span class="nav-number">1.1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#好处"><span class="nav-number">1.1.2.</span> <span class="nav-text">好处</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

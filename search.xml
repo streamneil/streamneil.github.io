@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CoreJava(10） - 谈谈 Java JVM（二）</title>
+    <url>/2020/06/01/corejava-10-jvm2/</url>
+    <content><![CDATA[<p>如何关键 JVM 堆内存的使用情况，成了我们日常排查问题很重要的手段。大致如下：</p>
+<ul>
+<li>JConsole、VisualM 它们是直接连接 Java 进程，然后在图形化界面掌握内存情况。</li>
+<li>jstat、jmap命令行工具进行查询；</li>
+<li>GC 日志；</li>
+<li>NMT（堆外内存的直接内存）；</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-XX:NativeMemoryTracking=summary</span><br></pre></td></tr></table></figure>
+<p>默认是关闭。</p>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><h3 id="堆外内存"><a href="#堆外内存" class="headerlink" title="堆外内存"></a>堆外内存</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>内存对象分配在JVM中堆以外的内存，也可以称为直接内存，这些内存直接受操作系统管理（而不是JVM），这样做的好处是能够在一定程度上减少垃圾回收对应用程序造成的影响。一般我们使用Unsafe和NIO包下ByteBuffer来创建堆外内存。</p>
+<h4 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h4><ul>
+<li>减少 GC</li>
+<li>提高 IO 效率</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>内存诊断</tag>
+        <tag>JVM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CoreJava(9) - 谈谈 Java JVM（一）</title>
     <url>/2020/05/14/corejava-9-jvm1/</url>
     <content><![CDATA[<p>我们都知道 Java 里面有垃圾回收，有了它，我们在码 Java 代码的时候确实省了不少事情。但是，如果我们仅仅停留在让垃圾回收来给我们管理我们的内存的话，那我们的只能写出一般般的程序。所以，如果想要能设计高扩展性以及对性能和内存调优有更好要求的小伙伴来说，熟悉 JVM 及其内存结果和工作机制，是必不可少的。</p>

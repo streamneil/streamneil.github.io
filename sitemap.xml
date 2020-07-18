@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://neilli.cn/about/index.html</loc>
+    
+    <lastmod>2020-07-18T15:06:35.003Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://neilli.cn/2020/06/01/corejava-10-jvm2/</loc>
+    
+    <lastmod>2020-07-15T01:51:25.175Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://neilli.cn/2020/05/14/corejava-9-jvm1/</loc>
     
-    <lastmod>2020-06-03T09:25:42.587Z</lastmod>
+    <lastmod>2020-06-03T09:25:49.935Z</lastmod>
     
   </url>
   
@@ -96,13 +110,6 @@
     <loc>https://neilli.cn/categories/index.html</loc>
     
     <lastmod>2019-11-25T09:39:56.201Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://neilli.cn/about/index.html</loc>
-    
-    <lastmod>2018-11-14T16:49:49.000Z</lastmod>
     
   </url>
   
