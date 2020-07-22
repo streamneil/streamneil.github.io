@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://neilli.cn/"/>
-  <updated>2020-07-21T00:50:06.646Z</updated>
+  <updated>2020-07-21T12:05:05.313Z</updated>
   <id>https://neilli.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://neilli.cn/2020/06/01/corejava-10-jvm2/"/>
     <id>https://neilli.cn/2020/06/01/corejava-10-jvm2/</id>
     <published>2020-05-31T16:32:40.000Z</published>
-    <updated>2020-07-21T00:50:06.646Z</updated>
+    <updated>2020-07-21T12:05:05.313Z</updated>
     
     <content type="html"><![CDATA[<p>如何观察 JVM 堆内存的使用情况，成了我们日常排查问题很重要的手段。大致如下：</p><ul><li>JConsole（堆内存、堆外内存）、VisualM 它们是直接连接 Java 进程，然后在图形化界面掌握内存情况。</li><li>jstat、jmap命令行工具进行查询 - 堆、方法区；</li><li>GC 日志；</li><li>NMT（堆外内存的直接内存）；</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-XX:NativeMemoryTracking=summary</span><br></pre></td></tr></table></figure><p>默认是关闭。</p><h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><h3 id="堆外内存"><a href="#堆外内存" class="headerlink" title="堆外内存"></a>堆外内存</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>内存对象分配在JVM中堆以外的内存，也可以称为直接内存，这些内存直接受操作系统管理（而不是JVM），这样做的好处是能够在一定程度上减少垃圾回收对应用程序造成的影响。一般我们使用Unsafe和NIO包下ByteBuffer来创建堆外内存。</p><h4 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h4><ul><li>减少 GC</li><li>提高 IO 效率</li></ul><h3 id="堆内存"><a href="#堆内存" class="headerlink" title="堆内存"></a>堆内存</h3><p>从年代角度划分：新生代、老年代、永久代；</p><h4 id="新生代"><a href="#新生代" class="headerlink" title="新生代"></a>新生代</h4><p>绝大多数的对象的创建和销毁的区域，在通常Java应用中，绝大多数对象的生命周期都是很短暂的。</p><h4 id="老年代"><a href="#老年代" class="headerlink" title="老年代"></a>老年代</h4><p>放置长生命周期的对象，通常都是从Survivor区域拷贝过来的对象。有特殊情况，如果对象过大，会分配到新生代eden其他位置；如果过大，无法在新生代找到足够长的连续空间，JVM 会直接分配到老年代。</p><h4 id="永久代"><a href="#永久代" class="headerlink" title="永久代"></a>永久代</h4><p>存储 Java 元数据、常量池、Inter字符串缓存。jdk8就没有永久代了。</p><h4 id="TLAB"><a href="#TLAB" class="headerlink" title="TLAB"></a>TLAB</h4><p>Thread Local Allocation Buffer, JVM 为每个线程分配一个私有内存区域，因为多个线程同时操作时，为了避免操作同一地址，可能使用加锁机制，进而影响分配速度。</p>]]></content>
     
@@ -37,9 +37,9 @@
     
       <category term="Java" scheme="https://neilli.cn/tags/Java/"/>
     
-      <category term="JVM" scheme="https://neilli.cn/tags/JVM/"/>
-    
       <category term="内存诊断" scheme="https://neilli.cn/tags/%E5%86%85%E5%AD%98%E8%AF%8A%E6%96%AD/"/>
+    
+      <category term="JVM" scheme="https://neilli.cn/tags/JVM/"/>
     
   </entry>
   
