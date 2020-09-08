@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>架构 - 分布式缓存</title>
+    <url>/2020/08/29/architect-cache/</url>
+    <content><![CDATA[<p>缓存，相信每个做过后端的都应该很清楚，它有相对来说技术简单、对性能提升明显的特点广受后端研发和架构师的喜爱。</p>
+<p>但是，不是所有的场景下都适合用缓存，所以，使用缓存的时候要注意以下几点：</p>
+<ol>
+<li>数据频繁修改，不适合用缓存。</li>
+<li>数据无热点性，也就说用的情况不多，命中率低。</li>
+<li>强一致性，不适合用缓存。</li>
+<li>缓存可能会雪崩，从而导致整个系统瘫痪。</li>
+</ol>
+<h2 id="缓存特点"><a href="#缓存特点" class="headerlink" title="缓存特点"></a>缓存特点</h2><ol>
+<li>技术简单</li>
+<li>性能提升明显</li>
+<li>应用广泛</li>
+</ol>
+<p>从计算机、数据库到浏览器我们能看到很多缓存的身影。在外部系统中有：DNS缓存、浏览器缓存、http代理和反向代理、CDN缓存以及各种对象缓存。所以，本章我们重点要学习的就是对象缓存，我们常见的有：Redis，Memcached等。</p>
+<h2 id="缓存为什么那么显著的提升性能呢"><a href="#缓存为什么那么显著的提升性能呢" class="headerlink" title="缓存为什么那么显著的提升性能呢"></a>缓存为什么那么显著的提升性能呢</h2><ol>
+<li>缓存的数据来自于内存，计算机访问内存数据肯定是比磁盘更快的。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>架构</category>
+      </categories>
+      <tags>
+        <tag>架构</tag>
+        <tag>缓存</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>管理思考 - 我平常在干些啥</title>
     <url>/2020/08/27/what-doing-as-m/</url>
     <content><![CDATA[<p>回到主题：做管理，平常都是干啥。其实，如果这个问题放到几年前，或许我真不知道该如何回答。</p>
@@ -136,8 +165,8 @@
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>JVM</tag>
         <tag>内存诊断</tag>
+        <tag>JVM</tag>
       </tags>
   </entry>
   <entry>

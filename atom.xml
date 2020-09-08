@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://neilli.cn/"/>
-  <updated>2020-09-08T03:52:48.724Z</updated>
+  <updated>2020-09-08T13:06:56.325Z</updated>
   <id>https://neilli.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>架构 - 分布式缓存</title>
+    <link href="https://neilli.cn/2020/08/29/architect-cache/"/>
+    <id>https://neilli.cn/2020/08/29/architect-cache/</id>
+    <published>2020-08-29T15:19:31.000Z</published>
+    <updated>2020-09-08T13:06:56.325Z</updated>
+    
+    <content type="html"><![CDATA[<p>缓存，相信每个做过后端的都应该很清楚，它有相对来说技术简单、对性能提升明显的特点广受后端研发和架构师的喜爱。</p><p>但是，不是所有的场景下都适合用缓存，所以，使用缓存的时候要注意以下几点：</p><ol><li>数据频繁修改，不适合用缓存。</li><li>数据无热点性，也就说用的情况不多，命中率低。</li><li>强一致性，不适合用缓存。</li><li>缓存可能会雪崩，从而导致整个系统瘫痪。</li></ol><h2 id="缓存特点"><a href="#缓存特点" class="headerlink" title="缓存特点"></a>缓存特点</h2><ol><li>技术简单</li><li>性能提升明显</li><li>应用广泛</li></ol><p>从计算机、数据库到浏览器我们能看到很多缓存的身影。在外部系统中有：DNS缓存、浏览器缓存、http代理和反向代理、CDN缓存以及各种对象缓存。所以，本章我们重点要学习的就是对象缓存，我们常见的有：Redis，Memcached等。</p><h2 id="缓存为什么那么显著的提升性能呢"><a href="#缓存为什么那么显著的提升性能呢" class="headerlink" title="缓存为什么那么显著的提升性能呢"></a>缓存为什么那么显著的提升性能呢</h2><ol><li>缓存的数据来自于内存，计算机访问内存数据肯定是比磁盘更快的。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      缓存，是我们后端用到最多、最频繁、也是相对不那么陌生的一个组件了，在中台架构中缓存是充当什么角色呢？今天晚上整好梳理下。
+    
+    </summary>
+    
+    
+      <category term="架构" scheme="https://neilli.cn/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="https://neilli.cn/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+      <category term="缓存" scheme="https://neilli.cn/tags/%E7%BC%93%E5%AD%98/"/>
+    
+  </entry>
   
   <entry>
     <title>管理思考 - 我平常在干些啥</title>
@@ -112,9 +137,9 @@
     
       <category term="Java" scheme="https://neilli.cn/tags/Java/"/>
     
-      <category term="JVM" scheme="https://neilli.cn/tags/JVM/"/>
-    
       <category term="内存诊断" scheme="https://neilli.cn/tags/%E5%86%85%E5%AD%98%E8%AF%8A%E6%96%AD/"/>
+    
+      <category term="JVM" scheme="https://neilli.cn/tags/JVM/"/>
     
   </entry>
   
