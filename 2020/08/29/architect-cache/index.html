@@ -106,15 +106,15 @@
 <meta name="description" content="缓存，是我们后端用到最多、最频繁、也是相对不那么陌生的一个组件了，在中台架构中缓存是充当什么角色呢？今天晚上整好梳理下。">
 <meta name="keywords" content="架构、缓存">
 <meta property="og:type" content="article">
-<meta property="og:title" content="架构 - 分布式缓存">
+<meta property="og:title" content="架构 - 分布式缓存（一）">
 <meta property="og:url" content="https://neilli.cn/2020/08/29/architect-cache/index.html">
 <meta property="og:site_name" content="Neil">
 <meta property="og:description" content="缓存，是我们后端用到最多、最频繁、也是相对不那么陌生的一个组件了，在中台架构中缓存是充当什么角色呢？今天晚上整好梳理下。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://neilli.cn/2020/08/29/architect-cache/setcache.png">
-<meta property="og:updated_time" content="2020-09-09T03:49:03.502Z">
+<meta property="og:updated_time" content="2020-09-09T06:29:25.660Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="架构 - 分布式缓存">
+<meta name="twitter:title" content="架构 - 分布式缓存（一）">
 <meta name="twitter:description" content="缓存，是我们后端用到最多、最频繁、也是相对不那么陌生的一个组件了，在中台架构中缓存是充当什么角色呢？今天晚上整好梳理下。">
 <meta name="twitter:image" content="https://neilli.cn/2020/08/29/architect-cache/setcache.png">
 
@@ -150,7 +150,7 @@
 
 
 
-  <title>架构 - 分布式缓存 | Neil</title>
+  <title>架构 - 分布式缓存（一） | Neil</title>
   
 
 
@@ -358,7 +358,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">架构 - 分布式缓存</h1>
+          <h1 class="post-title" itemprop="name headline">架构 - 分布式缓存（一）</h1>
         
 
         <div class="post-meta">
@@ -410,7 +410,7 @@
 
           
           
-             <span id="/2020/08/29/architect-cache/" class="leancloud_visitors" data-flag-title="架构 - 分布式缓存">
+             <span id="/2020/08/29/architect-cache/" class="leancloud_visitors" data-flag-title="架构 - 分布式缓存（一）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -480,9 +480,20 @@
 <h2 id="缓存键集合大小"><a href="#缓存键集合大小" class="headerlink" title="缓存键集合大小"></a>缓存键集合大小</h2><p>刚刚我们用具体例子熟悉了写入缓存和获取缓存的流程和机制。我们知道，缓存是通过键来精准匹配数据的。</p>
 <p>再比如，如果我们要缓存整个会员(用户)的数据，那我们的键就是 UserID ,那键集合空间就是我们这个系统所有的会员的全体 ID ，比如我们有 1000w 个会员，那我们就会有 1000w 个键存在缓存键集合中。</p>
 <p>在设计缓存中有个必须注意的点：键越少越好。重点体现在它性能方面。</p>
-<h2 id="缓存内存空间大小"><a href="#缓存内存空间大小" class="headerlink" title="缓存内存空间大小"></a>缓存内存空间大小</h2><h2 id="缓存命中率"><a href="#缓存命中率" class="headerlink" title="缓存命中率"></a>缓存命中率</h2><p>缓存命中率也是经常面试中经常被问到的。我们知道我们使用缓存的场景是读多写少，我们希望通过缓存来实现一次数据库查询写入缓存之后，满足后面多次查询的请求，减少数据库压力，直接从缓存获取数据，提高性能。所以，希望缓存命中率越高越好。</p>
+<h2 id="缓存内存空间大小"><a href="#缓存内存空间大小" class="headerlink" title="缓存内存空间大小"></a>缓存内存空间大小</h2><p>缓存的数据是存储在内存中，内存空间越大，其缓存对象就会越多。一般我们缓存的大小都不会像硬盘一样搞个几百 G，或几个 T，所以，缓存的使用要有规范，不能什么数据都塞进来。在特定大小的缓存里，如果要缓存新对象，肯定要删除一些老的对象，删除老的对象肯定会影响缓存命中。</p>
+<p>物理缓存空间越大，缓存对象越多，缓存命中越高。</p>
+<h2 id="缓存命中率"><a href="#缓存命中率" class="headerlink" title="缓存命中率"></a>缓存命中率</h2><p>缓存命中率也是经常面试中经常被问到的。我们知道我们使用缓存的场景是读多写少，我们希望通过缓存来实现一次数据库查询写入缓存之后，满足后面多次查询的请求，减少数据库压力，直接从缓存获取数据，提高性能。所以，希望缓存命中率越高越好。</p>
 <p>计算公式：正确缓存查询得到数据次数 / 查询总次数。</p>
 <p>当然，缓存生产时间、上面的说的键集合大小、内存空间都是影响命中率的因素。</p>
+<h2 id="缓存寿命"><a href="#缓存寿命" class="headerlink" title="缓存寿命"></a>缓存寿命</h2><p>缓存的对象的生存时间称为 TTL。刚刚说了缓存的时间、缓存空间越大缓存命中就会越高，但是内存不是足够大，总要有所取舍。</p>
+<p>缓存失效的方式有：实时失效、过期失效、LRU失效。</p>
+<h3 id="实时失效"><a href="#实时失效" class="headerlink" title="实时失效"></a>实时失效</h3><p>当我们缓存了某个数据，比如某个商品信息，此时我们更像商品的价格，此时需要直接删除缓存的数据。当获取这个商品的时候先从缓存获取，返回为空，然后此时从数据库查询获取最新数据，再更新缓存。</p>
+<p>注意，更新数据，直接删除缓存，不可直接更新缓存。</p>
+<h3 id="过期失效"><a href="#过期失效" class="headerlink" title="过期失效"></a>过期失效</h3><p>我们存储数据的时候会设置对象的过期时间，如果到时间之后，对象会自动被删除（其实是缓存有算法轮询删除）。</p>
+<p>注意，此时注意那些过期时间为 <code>-1</code> 的对象。</p>
+<h3 id="LRU"><a href="#LRU" class="headerlink" title="LRU"></a>LRU</h3><p>LRU 是最近最久未使用算法。当缓存空间不够，如果要存入新的对象，是需要删除一些对象才可以存储进来新的。此时可以使用 LRU 算法。这个算法，也经常会被面试问到。</p>
+<p>大致实现：一个链表来实现，当访问了某个对象，把对象移到队头。所以，越往队尾就代表越少被访问，删除是则从队尾开始删除。</p>
+<p>今天先从基本概念了解下缓存。下节我们复习下外部系统的缓存，如反向代理之类的。</p>
 
       
     </div>
@@ -677,7 +688,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存特点"><span class="nav-number">1.</span> <span class="nav-text">缓存特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存为什么那么显著的提升性能呢"><span class="nav-number">2.</span> <span class="nav-text">缓存为什么那么显著的提升性能呢</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hash-表"><span class="nav-number">3.</span> <span class="nav-text">Hash 表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#往缓存加数据"><span class="nav-number">4.</span> <span class="nav-text">往缓存加数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从缓存获取数据"><span class="nav-number">5.</span> <span class="nav-text">从缓存获取数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存键集合大小"><span class="nav-number">6.</span> <span class="nav-text">缓存键集合大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存内存空间大小"><span class="nav-number">7.</span> <span class="nav-text">缓存内存空间大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存命中率"><span class="nav-number">8.</span> <span class="nav-text">缓存命中率</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存特点"><span class="nav-number">1.</span> <span class="nav-text">缓存特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存为什么那么显著的提升性能呢"><span class="nav-number">2.</span> <span class="nav-text">缓存为什么那么显著的提升性能呢</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hash-表"><span class="nav-number">3.</span> <span class="nav-text">Hash 表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#往缓存加数据"><span class="nav-number">4.</span> <span class="nav-text">往缓存加数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从缓存获取数据"><span class="nav-number">5.</span> <span class="nav-text">从缓存获取数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存键集合大小"><span class="nav-number">6.</span> <span class="nav-text">缓存键集合大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存内存空间大小"><span class="nav-number">7.</span> <span class="nav-text">缓存内存空间大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存命中率"><span class="nav-number">8.</span> <span class="nav-text">缓存命中率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存寿命"><span class="nav-number">9.</span> <span class="nav-text">缓存寿命</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实时失效"><span class="nav-number">9.1.</span> <span class="nav-text">实时失效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#过期失效"><span class="nav-number">9.2.</span> <span class="nav-text">过期失效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LRU"><span class="nav-number">9.3.</span> <span class="nav-text">LRU</span></a></li></ol></li></ol></div>
             
 
           </div>
