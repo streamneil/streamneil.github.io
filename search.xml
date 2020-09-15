@@ -3,7 +3,9 @@
   <entry>
     <title>架构 - 分布式缓存（三）</title>
     <url>/2020/09/03/architect-cache3/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="分布式缓存"><a href="#分布式缓存" class="headerlink" title="分布式缓存"></a>分布式缓存</h2><p>顾名思义，分布式缓存和普通的缓存的区别就是在于，分布式缓存是通过多台缓存服务器以集群的形式对外提供缓存服务。</p>
+<p>所以，分布式缓存的问题就在于我们有多台缓存服务器，当我们存了某个缓存在其中一台服务器，那当我们想获取的时候如何准确快速的找到这台服务器呢？</p>
+<h2 id="余数算法"><a href="#余数算法" class="headerlink" title="余数算法"></a>余数算法</h2>]]></content>
       <categories>
         <category>架构</category>
       </categories>
@@ -239,8 +241,8 @@
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>内存诊断</tag>
         <tag>JVM</tag>
+        <tag>内存诊断</tag>
       </tags>
   </entry>
   <entry>

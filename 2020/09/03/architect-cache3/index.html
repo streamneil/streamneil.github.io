@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Neil">
 <meta property="og:description" content="什么是分部署缓存？和我们之前用的单机或哨兵模式有啥区别？主要针对哪些应用场景呢？。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-09-14T13:22:06.104Z">
+<meta property="og:updated_time" content="2020-09-15T08:44:10.112Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="架构 - 分布式缓存（三）">
 <meta name="twitter:description" content="什么是分部署缓存？和我们之前用的单机或哨兵模式有啥区别？主要针对哪些应用场景呢？。">
@@ -445,7 +445,9 @@
       
 
       
-        
+        <h2 id="分布式缓存"><a href="#分布式缓存" class="headerlink" title="分布式缓存"></a>分布式缓存</h2><p>顾名思义，分布式缓存和普通的缓存的区别就是在于，分布式缓存是通过多台缓存服务器以集群的形式对外提供缓存服务。</p>
+<p>所以，分布式缓存的问题就在于我们有多台缓存服务器，当我们存了某个缓存在其中一台服务器，那当我们想获取的时候如何准确快速的找到这台服务器呢？</p>
+<h2 id="余数算法"><a href="#余数算法" class="headerlink" title="余数算法"></a>余数算法</h2>
       
     </div>
     
@@ -552,8 +554,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -620,6 +631,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#分布式缓存"><span class="nav-number">1.</span> <span class="nav-text">分布式缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#余数算法"><span class="nav-number">2.</span> <span class="nav-text">余数算法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

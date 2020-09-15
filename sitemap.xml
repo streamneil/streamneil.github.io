@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://neilli.cn/2020/09/03/architect-cache3/</loc>
+    
+    <lastmod>2020-09-15T08:44:10.112Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://neilli.cn/2019/12/12/corejava-1/</loc>
     
     <lastmod>2020-09-15T00:50:56.904Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://neilli.cn/2020/08/30/architect-cache2/</loc>
     
     <lastmod>2020-09-15T00:43:08.388Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://neilli.cn/2020/09/03/architect-cache3/</loc>
-    
-    <lastmod>2020-09-14T13:22:06.104Z</lastmod>
     
   </url>
   
