@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://neilli.cn/2019/12/12/corejava-1/</loc>
+    <lastmod>2020-09-15</lastmod>
+  </url>  <url>
     <loc>https://neilli.cn/2020/08/30/architect-cache2/</loc>
     <lastmod>2020-09-15</lastmod>
   </url>  <url>
     <loc>https://neilli.cn/2020/09/03/architect-cache3/</loc>
     <lastmod>2020-09-14</lastmod>
-  </url>  <url>
-    <loc>https://neilli.cn/2020/08/29/architect-cache/architect-cache/</loc>
-    <lastmod>2020-09-09</lastmod>
   </url>  <url>
     <loc>https://neilli.cn/2020/08/29/architect-cache/</loc>
     <lastmod>2020-09-09</lastmod>
@@ -56,9 +56,6 @@
     <lastmod>2019-12-14</lastmod>
   </url>  <url>
     <loc>https://neilli.cn/2019/12/12/corejava-2-string/</loc>
-    <lastmod>2019-12-14</lastmod>
-  </url>  <url>
-    <loc>https://neilli.cn/2019/12/12/corejava-1/</loc>
     <lastmod>2019-12-14</lastmod>
   </url>  <url>
     <loc>https://neilli.cn/2019/11/26/filter-interceptor/</loc>
