@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>架构 - 分布式消息队列（一）</title>
+    <url>/2020/09/07/architect-queue1/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>架构</category>
+      </categories>
+      <tags>
+        <tag>架构</tag>
+        <tag>消息队列</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>架构 - 分布式缓存（三）</title>
     <url>/2020/09/03/architect-cache3/</url>
     <content><![CDATA[<h2 id="分布式缓存"><a href="#分布式缓存" class="headerlink" title="分布式缓存"></a>分布式缓存</h2><p>顾名思义，分布式缓存和普通的缓存的区别就是在于，分布式缓存是通过多台缓存服务器以集群的形式对外提供缓存服务。</p>
