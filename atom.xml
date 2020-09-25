@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://neilli.cn/"/>
-  <updated>2020-09-18T03:32:42.869Z</updated>
+  <updated>2020-09-25T13:51:48.060Z</updated>
   <id>https://neilli.cn/</id>
   
   <author>
@@ -21,7 +21,9 @@
     <link href="https://neilli.cn/2020/09/07/architect-queue1/"/>
     <id>https://neilli.cn/2020/09/07/architect-queue1/</id>
     <published>2020-09-06T16:11:21.000Z</published>
-    <updated>2020-09-18T03:32:42.869Z</updated>
+    <updated>2020-09-25T13:51:48.060Z</updated>
+    
+    <content type="html"><![CDATA[<p>消息队列的作用我们大家都知道，本文主要从整体上学习下消息队列的同步与异步、以及异步架构及其反模式、异步架构有哪些好处、挑战和问题等。</p><p>我们中台搞到现在不得不上消息队列，目前场景是用到统一日志中心处。</p><p><img src="queue1-1.png" alt=""></p>]]></content>
     
     <summary type="html">
     
