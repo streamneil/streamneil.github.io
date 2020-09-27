@@ -114,7 +114,7 @@
 <meta property="og:image" content="https://neilli.cn/2020/09/07/architect-queue1/queue1-1.png">
 <meta property="og:image" content="https://neilli.cn/2020/09/07/architect-queue1/queue1-2.png">
 <meta property="og:image" content="https://neilli.cn/2020/09/07/architect-queue1/queue1-3.png">
-<meta property="og:updated_time" content="2020-09-27T13:52:12.372Z">
+<meta property="og:updated_time" content="2020-09-27T13:55:45.825Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="架构 - 分布式消息队列（一）">
 <meta name="twitter:description" content="高并发架构设计中，肯定必不可少的要有消息队列吧。而对于整个公司做为 PaaS 层的能力组件，分布式消息队列肯定是不二选择了吧。故，总结下目前我们中台架构的分布式消息队列的设计。">
@@ -479,6 +479,7 @@
 <p>分布式的复杂度是传统单体系统不能比的，还是消息队列的消息是无序的，所以消费者消费的时候不能指定谁先谁后，消息重入、丢失等。</p>
 <p>消息无序其实是指入消息队列时能指定顺序，但是消费的时候是不能明确指定顺序。</p>
 <p>消息重入会造成重复消费的风险，比如消息有个失败机制，当消费失败消息会被重新加入队列，但此时其实是消费成功了，一旦加入队列中，那消费者就会消费他，如果此消息不是幂等的，就会造成重复消费问题，比如发送短信，会被发送多次，或发放积分等。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>消息队列在微服务架构中是必不可少的，那么个相互独立服务，服务之间解耦是肯定要用到的。其本身的异步架构能给我们在微服务架构上带来很多好处。</p>
 
       
     </div>
@@ -673,7 +674,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#统一日志服务设计"><span class="nav-number">1.</span> <span class="nav-text">统一日志服务设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同步"><span class="nav-number">2.</span> <span class="nav-text">同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异步"><span class="nav-number">3.</span> <span class="nav-text">异步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#消息队列异步架构"><span class="nav-number">4.</span> <span class="nav-text">消息队列异步架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生产者"><span class="nav-number">4.1.</span> <span class="nav-text">生产者</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#消费者"><span class="nav-number">4.2.</span> <span class="nav-text">消费者</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#消息队列"><span class="nav-number">4.3.</span> <span class="nav-text">消息队列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#消息队列模式"><span class="nav-number">5.</span> <span class="nav-text">消息队列模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#点对点模式"><span class="nav-number">5.1.</span> <span class="nav-text">点对点模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发布订阅模式"><span class="nav-number">5.2.</span> <span class="nav-text">发布订阅模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#好处"><span class="nav-number">6.</span> <span class="nav-text">好处</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挑战"><span class="nav-number">7.</span> <span class="nav-text">挑战</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#统一日志服务设计"><span class="nav-number">1.</span> <span class="nav-text">统一日志服务设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同步"><span class="nav-number">2.</span> <span class="nav-text">同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异步"><span class="nav-number">3.</span> <span class="nav-text">异步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#消息队列异步架构"><span class="nav-number">4.</span> <span class="nav-text">消息队列异步架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生产者"><span class="nav-number">4.1.</span> <span class="nav-text">生产者</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#消费者"><span class="nav-number">4.2.</span> <span class="nav-text">消费者</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#消息队列"><span class="nav-number">4.3.</span> <span class="nav-text">消息队列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#消息队列模式"><span class="nav-number">5.</span> <span class="nav-text">消息队列模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#点对点模式"><span class="nav-number">5.1.</span> <span class="nav-text">点对点模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发布订阅模式"><span class="nav-number">5.2.</span> <span class="nav-text">发布订阅模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#好处"><span class="nav-number">6.</span> <span class="nav-text">好处</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挑战"><span class="nav-number">7.</span> <span class="nav-text">挑战</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">8.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
