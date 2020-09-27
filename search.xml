@@ -4,8 +4,11 @@
     <title>架构 - 分布式消息队列（一）</title>
     <url>/2020/09/07/architect-queue1/</url>
     <content><![CDATA[<p>消息队列的作用我们大家都知道，本文主要从整体上学习下消息队列的同步与异步、以及异步架构及其反模式、异步架构有哪些好处、挑战和问题等。</p>
-<p>我们中台搞到现在不得不上消息队列，目前场景是用到统一日志中心处。</p>
+<h2 id="统一日志服务设计"><a href="#统一日志服务设计" class="headerlink" title="统一日志服务设计"></a>统一日志服务设计</h2><p>我们中台搞到现在不得不上消息队列，目前场景是用到统一日志中心处。</p>
 <p><img src="queue1-1.png" alt=""></p>
+<p>统一日志中心作为中台的基础服务，承担着所有业务服务的系统日志、业务日志的收集和输出、检索功能。便于开发者利用此服务迅速定位自己服务的问题，而不用一有问题就去找运维、或进生产环境查看日志，况且目前环境是 docker + k8s 更不利于普通开发者去查看和定位。</p>
+<h2 id="异步和同步"><a href="#异步和同步" class="headerlink" title="异步和同步"></a>异步和同步</h2><p>消息队列的同步模式是指生产者生产消息到消息处理结束，整个过程都是阻塞的。举个例子，我们中台中待开发的一个服务：<code>机器人服务</code>，整个服务是用来处理整个系统中所有服务要发送的消息，比如：短信、邮件、站内信、通知、消息等，如果此时用到消息队列的同步模式，大致设计如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@startuml</span><br><span class="line"></span><br><span class="line">三方服务 -&gt; 星云网关: 请求</span><br><span class="line">星云网关 --&gt; 星云网关: 校验</span><br><span class="line"></span><br><span class="line">alt 校验不通过</span><br><span class="line">星云网关 --&gt; 三方服务: 401/403</span><br><span class="line">else 校验通过</span><br><span class="line">星云网关 -&gt; 星云服务: 请求(转发)</span><br><span class="line">星云服务 --&gt; 星云网关: response</span><br><span class="line">星云网关 --&gt; 三方服务: response</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>架构</category>
