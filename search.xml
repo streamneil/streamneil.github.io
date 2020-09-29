@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>微信小程序(1)-WXML语言特性</title>
+    <url>/2020/09/29/weapp-wxml-1/</url>
+    <content><![CDATA[<p>WXML 具体是啥就不说了哎。自己脑补吧，直奔主题。</p>
+<h1 id="语言特性"><a href="#语言特性" class="headerlink" title="语言特性"></a>语言特性</h1><ul>
+<li>数据绑定</li>
+<li>列表渲染</li>
+<li>条件渲染</li>
+<li>模板引用</li>
+</ul>
+<h2 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h2><p>Hello World 例子，源码<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;view class=&quot;container&quot;&gt;</span><br><span class="line">  &lt;view class=&quot;userinfo&quot;&gt;</span><br><span class="line">    &lt;button wx:if=&quot;&#123;&#123;!hasUserInfo &amp;&amp; canIUse&#125;&#125;&quot; open-type=&quot;getUserInfo&quot; bindgetuserinfo=&quot;getUserInfo&quot;&gt; 获取头像昵称 &lt;/button&gt;</span><br><span class="line">    &lt;block wx:else&gt;</span><br><span class="line">      &lt;image bindtap=&quot;bindViewTap&quot; class=&quot;userinfo-avatar&quot; src=&quot;&#123;&#123;userInfo.avatarUrl&#125;&#125;&quot; mode=&quot;cover&quot;&gt;&lt;/image&gt;</span><br><span class="line">      &lt;text class=&quot;userinfo-nickname&quot;&gt;&#123;&#123;userInfo.nickName&#125;&#125;&lt;/text&gt;</span><br><span class="line">    &lt;/block&gt;</span><br><span class="line">  &lt;/view&gt;</span><br><span class="line">  &lt;view class=&quot;usermotto&quot;&gt;</span><br><span class="line">    &lt;text class=&quot;user-motto&quot;&gt;&#123;&#123;motto&#125;&#125;&lt;/text&gt;</span><br><span class="line">  &lt;/view&gt;</span><br><span class="line">&lt;/view&gt;</span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    motto: &apos;Hello World&apos;,</span><br><span class="line">    userInfo: &#123;&#125;,</span><br><span class="line">    hasUserInfo: false,</span><br><span class="line">    canIUse: wx.canIUse(&apos;button.open-type.getUserInfo&apos;)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其中<code>&lt;text class=&quot;user-motto&quot;&gt;&lt;/text&gt;</code> 就是数据绑定。 是叫<code>mustache</code>语法，，具体数据在js的data内容里面。</p>
+<p>注意所有的组件都是小写。 weapp是大小写敏感的。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">// WXML</span><br><span class="line">&lt;view hidden=&quot;&#123;&#123; flag ? true : false &#125;&#125;&quot;&gt;</span><br><span class="line">hidden</span><br><span class="line">&lt;/view&gt;</span><br><span class="line"></span><br><span class="line">// js</span><br><span class="line">data:&#123;</span><br><span class="line">   flag: false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>wxml 还能做运算符。</p>
+<h2 id="列表渲染"><a href="#列表渲染" class="headerlink" title="列表渲染"></a>列表渲染</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">//WXML</span><br><span class="line">&lt;view&gt;</span><br><span class="line">  &lt;block wx:for=&quot;&#123;&#123;items&#125;&#125;&quot; wx:for-item=&quot;item&quot; wx:key=&quot;index&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;view&gt;&#123;&#123;item.index&#125;&#125;:&#123;&#123;item.name&#125;&#125;&lt;/view&gt;</span><br><span class="line">  &lt;/block&gt;</span><br><span class="line">&lt;/view&gt;</span><br><span class="line">//js</span><br><span class="line"></span><br><span class="line">page(&#123;</span><br><span class="line">  data:&#123;</span><br><span class="line">     items:[</span><br><span class="line">      &#123;</span><br><span class="line">        name:&quot;xxx1&quot;</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        name:&quot;xxx2&quot;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">     ]</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<p>wx:key的用法需要注意。</p>
+<h2 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h2><p>这个简单，就是用wx:if,wx:elif wx:else</p>
+<p>不做总结了。</p>
+<p>wx:if 会有销毁视图的过程。有更高的切换消耗。hidden 是初始化耗费性能。看你选择了吧。</p>
+<h2 id="模板引用"><a href="#模板引用" class="headerlink" title="模板引用"></a>模板引用</h2><p>这个比较高级，也是更常用。</p>
+<p>你在某个地方定义个代码片段，其他地方可以引用。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">// WXML</span><br><span class="line"></span><br><span class="line">&lt;template name=&quot;address&quot;&gt;</span><br><span class="line">  &lt;view&gt;</span><br><span class="line">     &lt;view&gt;姓名：&#123;&#123;name&#125;&#125;&lt;/view&gt;</span><br><span class="line">     &lt;view&gt;地址：&#123;&#123;address&#125;&#125;&lt;/view&gt;</span><br><span class="line">  &lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">用到地方</span><br><span class="line"></span><br><span class="line">&lt;template is=&quot;address&quot; data=&#123;&#123;neil&#125;&#125;&gt;&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">page(&#123;</span><br><span class="line">  data:&#123;</span><br><span class="line">    neil:&#123;</span><br><span class="line">      name: &quot;neilli&quot;,</span><br><span class="line">      address: &quot;南京雨花台区&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>小程序</category>
+      </categories>
+      <tags>
+        <tag>小程序</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>团队管理-你团队有核心人才吗？</title>
     <url>/2020/09/28/guanli-how-to-corer/</url>
     <content><![CDATA[<p>核心人才如何筛选？</p>
