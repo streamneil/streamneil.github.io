@@ -90,7 +90,7 @@
 
 
 
-  <meta name="keywords" content="架构、缓存、分布式缓存">
+  <meta name="keywords" content="团队管理、管理">
 
 
 
@@ -103,18 +103,18 @@
 
 
 
-<meta name="description" content="什么是分部署缓存？和我们之前用的单机或哨兵模式有啥区别？主要针对哪些应用场景呢？。">
-<meta name="keywords" content="架构、缓存、分布式缓存">
+<meta name="description" content="今天人事找我说你们团队小伙伴很有想法，想成为核心，提了些建议。那作为领导你是如何筛选和甄别团队的核心人才，并如何对其进行针对性培养呢？">
+<meta name="keywords" content="团队管理、管理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="架构 - 分布式缓存（三）">
-<meta property="og:url" content="https://neilli.cn/2020/09/03/architect-cache3/index.html">
+<meta property="og:title" content="团队管理-你团队有核心人才吗？">
+<meta property="og:url" content="https://neilli.cn/2020/09/18/guanli-how-to-corer/index.html">
 <meta property="og:site_name" content="Neil">
-<meta property="og:description" content="什么是分部署缓存？和我们之前用的单机或哨兵模式有啥区别？主要针对哪些应用场景呢？。">
+<meta property="og:description" content="今天人事找我说你们团队小伙伴很有想法，想成为核心，提了些建议。那作为领导你是如何筛选和甄别团队的核心人才，并如何对其进行针对性培养呢？">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-09-16T09:36:42.153Z">
+<meta property="og:updated_time" content="2020-09-29T10:00:23.184Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="架构 - 分布式缓存（三）">
-<meta name="twitter:description" content="什么是分部署缓存？和我们之前用的单机或哨兵模式有啥区别？主要针对哪些应用场景呢？。">
+<meta name="twitter:title" content="团队管理-你团队有核心人才吗？">
+<meta name="twitter:description" content="今天人事找我说你们团队小伙伴很有想法，想成为核心，提了些建议。那作为领导你是如何筛选和甄别团队的核心人才，并如何对其进行针对性培养呢？">
 
 
 
@@ -148,7 +148,7 @@
 
 
 
-  <title>架构 - 分布式缓存（三） | Neil</title>
+  <title>团队管理-你团队有核心人才吗？ | Neil</title>
   
 
 
@@ -339,7 +339,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://neilli.cn/2020/09/03/architect-cache3/">
+    <link itemprop="mainEntityOfPage" href="https://neilli.cn/2020/09/18/guanli-how-to-corer/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="stream.neil@gmail.com">
@@ -356,7 +356,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">架构 - 分布式缓存（三）</h1>
+          <h1 class="post-title" itemprop="name headline">团队管理-你团队有核心人才吗？</h1>
         
 
         <div class="post-meta">
@@ -368,8 +368,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-03T20:19:31+08:00">
-                2020-09-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-18T20:42:40+08:00">
+                2020-09-18
               </time>
             
 
@@ -391,8 +391,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/架构/" itemprop="url" rel="index">
-                    <span itemprop="name">架构</span>
+                  <a href="/categories/管理/" itemprop="url" rel="index">
+                    <span itemprop="name">管理</span>
                   </a>
                 </span>
 
@@ -408,7 +408,7 @@
 
           
           
-             <span id="/2020/09/03/architect-cache3/" class="leancloud_visitors" data-flag-title="架构 - 分布式缓存（三）">
+             <span id="/2020/09/18/guanli-how-to-corer/" class="leancloud_visitors" data-flag-title="团队管理-你团队有核心人才吗？">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -428,7 +428,7 @@
 
           
               <div class="post-description">
-                  什么是分部署缓存？和我们之前用的单机或哨兵模式有啥区别？主要针对哪些应用场景呢？。
+                  今天人事找我说你们团队小伙伴很有想法，想成为核心，提了些建议。那作为领导你是如何筛选和甄别团队的核心人才，并如何对其进行针对性培养呢？
               </div>
           
 
@@ -445,14 +445,7 @@
       
 
       
-        <h2 id="分布式缓存"><a href="#分布式缓存" class="headerlink" title="分布式缓存"></a>分布式缓存</h2><p>顾名思义，分布式缓存和普通的缓存的区别就是在于，分布式缓存是通过多台缓存服务器以集群的形式对外提供缓存服务。</p>
-<p>所以，分布式缓存的问题就在于我们有多台缓存服务器，当我们存了某个缓存在其中一台服务器，那当我们想获取的时候如何准确快速的找到这台服务器呢？</p>
-<h2 id="余数算法"><a href="#余数算法" class="headerlink" title="余数算法"></a>余数算法</h2><p>假如缓存服务器搞3台，我们还是一样的存储 key, value，我们需要先把 key hashcode 之后，然后对 3 取模，定位出存储在哪台服务器。这样的足够简单，但是，不利于后期扩容。试想下，如果每台服务器已经存储了 100w 个 key，需要在扩容一台， 此时当需要获取缓存的 value 时，需要把 key 的 hashcode 对 4 取模去定位服务器，这无疑是灾难的。因为这样就找不到之前存储的服务器了。</p>
-<h2 id="一致性哈希算法"><a href="#一致性哈希算法" class="headerlink" title="一致性哈希算法"></a>一致性哈希算法</h2><p>为了解决上面问题，我们采用一致性哈希算法。一致性哈希算法其实就是先构建一个哈希环，然后把服务器hashcode之后放到环上，存取的时候也是先把key hashcode之后放到环上。然后沿着顺时针找到key离得最近的那个服务器就是其所存储的服务器。</p>
-<p>所以，这个算法有个天然的弊端，因为hash是随机的，所以，落到环上也是随机的，就有可能造成有的服务器存的多，有的少，造成不均。而后面扩容也是如此，如果扩容的服务器落到的那个存储量大的服务器那边，也可能会造成类似余数哈希一样的雪崩。</p>
-<p>面对上面问题，业内比较通用的方式是使用虚拟节点。这个自己去学习吧。不讲了。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本系列讲了缓存是我们常用的，且更容易提高性能的一个手段。要了解其分类；通读缓存和旁路缓存；哪些场景下适合用缓存、哪些场景下不适合用；以及其场景问题；最后，我们了解下分布式系统中常用的分布式缓存，并了解了2个常用的缓存路由算法，建议使用一致性哈希算法。</p>
-
+        
       
     </div>
     
@@ -477,9 +470,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/架构/" rel="tag">☭ 架构</a>
+            <a href="/tags/管理/" rel="tag">☭ 管理</a>
           
-            <a href="/tags/缓存/" rel="tag">☭ 缓存</a>
+            <a href="/tags/人才培养/" rel="tag">☭ 人才培养</a>
           
         </div>
       
@@ -492,8 +485,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/08/30/architect-cache2/" rel="next" title="架构 - 分布式缓存（二）">
-                <i class="fa fa-chevron-left"></i> 架构 - 分布式缓存（二）
+              <a href="/2020/09/11/guanli-jijixing/" rel="next" title="团队管理-新人积极性一直能保持？">
+                <i class="fa fa-chevron-left"></i> 团队管理-新人积极性一直能保持？
               </a>
             
           </div>
@@ -502,8 +495,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/09/07/architect-queue1/" rel="prev" title="架构 - 分布式消息队列（一）">
-                架构 - 分布式消息队列（一） <i class="fa fa-chevron-right"></i>
+              <a href="/2020/09/20/guanli-ziwo-run/" rel="prev" title="自我管理-我要开始跑步啦">
+                自我管理-我要开始跑步啦 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -563,17 +556,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -640,22 +624,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#分布式缓存"><span class="nav-number">1.</span> <span class="nav-text">分布式缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#余数算法"><span class="nav-number">2.</span> <span class="nav-text">余数算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一致性哈希算法"><span class="nav-number">3.</span> <span class="nav-text">一致性哈希算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
