@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>微信小程序(3)-WXS语言特性</title>
+    <url>/2020/09/29/weapp-wxml-3/</url>
+    <content><![CDATA[<p>wxs 是weixin script。</p>
+<h1 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h1><ul>
+<li>模块</li>
+<li>变量</li>
+<li>注释</li>
+<li>运算符</li>
+<li>语句</li>
+<li>数据类型</li>
+<li>基础类库</li>
+</ul>
+]]></content>
+      <categories>
+        <category>小程序</category>
+      </categories>
+      <tags>
+        <tag>小程序</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>微信小程序(2)-WXSS语言特性</title>
     <url>/2020/09/29/weapp-wxml-2/</url>
     <content><![CDATA[<p>wxss 是微信样式语言，用来描述wxml的样式的。和css概念类似。</p>
@@ -432,8 +453,8 @@
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>JVM</tag>
         <tag>内存诊断</tag>
+        <tag>JVM</tag>
       </tags>
   </entry>
   <entry>
