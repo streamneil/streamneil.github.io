@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>微信小程序(2)-WXSS语言特性</title>
+    <url>/2020/09/29/weapp-wxml-2/</url>
+    <content><![CDATA[<p>wxss 是微信样式语言，用来描述wxml的样式的。和css概念类似。</p>
+<h1 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h1><ul>
+<li>rpx</li>
+<li>样式导入</li>
+<li>内联样式</li>
+<li>选择器</li>
+</ul>
+<h2 id="样式导入、内联样式"><a href="#样式导入、内联样式" class="headerlink" title="样式导入、内联样式"></a>样式导入、内联样式</h2><p>@import 不同页面有相关的样式，就可以用到此场景。外联样式。</p>
+<p>内联样式 -&gt; style.</p>
+<p>总结：动态样式写入style,静态写入class。</p>
+<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><p>.class<br><code>#id</code><br>element<br>element,element<br>::after<br>::before</p>
+<p>简单定义：<code>用于选择你想要的元素的样式的一个模式</code>。</p>
+<p>选择器优先级：</p>
+<ul>
+<li>!important</li>
+<li>style</li>
+<li>#element</li>
+<li>.element</li>
+<li>element</li>
+</ul>
+]]></content>
+      <categories>
+        <category>小程序</category>
+      </categories>
+      <tags>
+        <tag>小程序</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>微信小程序(1)-WXML语言特性</title>
     <url>/2020/09/29/weapp-wxml-1/</url>
     <content><![CDATA[<p>WXML 具体是啥就不说了哎。自己脑补吧，直奔主题。</p>
@@ -23,6 +54,10 @@
 <h2 id="模板引用"><a href="#模板引用" class="headerlink" title="模板引用"></a>模板引用</h2><p>这个比较高级，也是更常用。</p>
 <p>你在某个地方定义个代码片段，其他地方可以引用。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">// WXML</span><br><span class="line"></span><br><span class="line">&lt;template name=&quot;address&quot;&gt;</span><br><span class="line">  &lt;view&gt;</span><br><span class="line">     &lt;view&gt;姓名：&#123;&#123;name&#125;&#125;&lt;/view&gt;</span><br><span class="line">     &lt;view&gt;地址：&#123;&#123;address&#125;&#125;&lt;/view&gt;</span><br><span class="line">  &lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">用到地方</span><br><span class="line"></span><br><span class="line">&lt;template is=&quot;address&quot; data=&#123;&#123;neil&#125;&#125;&gt;&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">page(&#123;</span><br><span class="line">  data:&#123;</span><br><span class="line">    neil:&#123;</span><br><span class="line">      name: &quot;neilli&quot;,</span><br><span class="line">      address: &quot;南京雨花台区&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<p>文件引用：<br>import 用法很特殊，建议你自己写个demo玩下。</p>
+<p>import 只能把目标文件引入进来，你的wxml只能引用其template模板。其他的不起作用。import有作用域的概念，如你的模板有嵌套引用，是没有用的。这样能避免是死循环。这个是小程序设计的亮点。</p>
+<p>include 是把目标wxml引入，不会关系你的template.</p>
+<p>注意他们2个不同玩法。</p>
 ]]></content>
       <categories>
         <category>小程序</category>
