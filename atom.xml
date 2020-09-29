@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://neilli.cn/"/>
-  <updated>2020-09-29T06:58:26.251Z</updated>
+  <updated>2020-09-29T12:24:19.849Z</updated>
   <id>https://neilli.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>团队管理-你团队有核心人才吗？</title>
+    <link href="https://neilli.cn/2020/09/28/guanli-how-to-corer/"/>
+    <id>https://neilli.cn/2020/09/28/guanli-how-to-corer/</id>
+    <published>2020-09-28T12:42:40.000Z</published>
+    <updated>2020-09-29T12:24:19.849Z</updated>
+    
+    <content type="html"><![CDATA[<p>核心人才如何筛选？</p>]]></content>
+    
+    <summary type="html">
+    
+      今天人事找我说你们团队小伙伴很有想法，想成为核心，提了些建议。那作为领导你是如何筛选和甄别团队的核心人才，并如何对其进行针对性培养呢？
+    
+    </summary>
+    
+    
+      <category term="管理" scheme="https://neilli.cn/categories/%E7%AE%A1%E7%90%86/"/>
+    
+    
+      <category term="管理" scheme="https://neilli.cn/tags/%E7%AE%A1%E7%90%86/"/>
+    
+      <category term="人才培养" scheme="https://neilli.cn/tags/%E4%BA%BA%E6%89%8D%E5%9F%B9%E5%85%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>自我管理-我要开始跑步啦</title>
@@ -40,31 +65,6 @@
       <category term="管理" scheme="https://neilli.cn/tags/%E7%AE%A1%E7%90%86/"/>
     
       <category term="自律" scheme="https://neilli.cn/tags/%E8%87%AA%E5%BE%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>团队管理-你团队有核心人才吗？</title>
-    <link href="https://neilli.cn/2020/09/18/guanli-how-to-corer/"/>
-    <id>https://neilli.cn/2020/09/18/guanli-how-to-corer/</id>
-    <published>2020-09-18T12:42:40.000Z</published>
-    <updated>2020-09-29T10:09:01.181Z</updated>
-    
-    <content type="html"><![CDATA[<p>核心人才如何筛选？</p>]]></content>
-    
-    <summary type="html">
-    
-      今天人事找我说你们团队小伙伴很有想法，想成为核心，提了些建议。那作为领导你是如何筛选和甄别团队的核心人才，并如何对其进行针对性培养呢？
-    
-    </summary>
-    
-    
-      <category term="管理" scheme="https://neilli.cn/categories/%E7%AE%A1%E7%90%86/"/>
-    
-    
-      <category term="管理" scheme="https://neilli.cn/tags/%E7%AE%A1%E7%90%86/"/>
-    
-      <category term="人才培养" scheme="https://neilli.cn/tags/%E4%BA%BA%E6%89%8D%E5%9F%B9%E5%85%BB/"/>
     
   </entry>
   
