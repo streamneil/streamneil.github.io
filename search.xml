@@ -38,11 +38,11 @@
 <p>简单定义：<code>用于选择你想要的元素的样式的一个模式</code>。</p>
 <p>选择器优先级：</p>
 <ul>
-<li>!important</li>
-<li>style</li>
-<li>#element</li>
-<li>.element</li>
-<li>element</li>
+<li>!important 无穷大</li>
+<li>style      1000</li>
+<li>#element   100</li>
+<li>.element   10</li>
+<li>element    1</li>
 </ul>
 ]]></content>
       <categories>
@@ -453,8 +453,8 @@
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>内存诊断</tag>
         <tag>JVM</tag>
+        <tag>内存诊断</tag>
       </tags>
   </entry>
   <entry>

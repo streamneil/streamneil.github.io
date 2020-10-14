@@ -2,23 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://neilli.cn/about/index.html</loc>
+    
+    <lastmod>2020-10-14T01:32:00.278Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://neilli.cn/2020/09/29/weapp-wxml-3/</loc>
     
-    <lastmod>2020-09-29T14:20:07.597Z</lastmod>
+    <lastmod>2020-10-14T01:23:37.956Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://neilli.cn/2020/09/29/weapp-wxml-2/</loc>
     
-    <lastmod>2020-09-29T14:05:54.059Z</lastmod>
+    <lastmod>2020-10-13T11:58:29.565Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://neilli.cn/2020/09/29/weapp-wxml-1/</loc>
     
-    <lastmod>2020-09-29T13:41:05.007Z</lastmod>
+    <lastmod>2020-09-30T02:40:18.069Z</lastmod>
     
   </url>
   
@@ -47,13 +54,6 @@
     <loc>https://neilli.cn/2020/09/07/architect-queue1/</loc>
     
     <lastmod>2020-09-27T13:56:19.196Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://neilli.cn/about/index.html</loc>
-    
-    <lastmod>2020-09-27T06:59:36.176Z</lastmod>
     
   </url>
   
