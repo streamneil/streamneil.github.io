@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CoreJava(一)-如何给别人讲述下你所理解的Java平台？</title>
+    <url>/2021/03/04/brew-change/</url>
+    <content><![CDATA[<p>// 替换brew.git:<br><code>cd &quot;$(brew --repo)&quot;</code><br><code>git remote set-url origin https://mirrors.ustc.edu.cn/brew.git</code></p>
+<p>// 替换homebrew-core.git:<br><code>cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;</code><br><code>git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git</code></p>
+<p>// 替换homebrew-cask.git:<br><code>cd &quot;$(brew --repo)&quot;/Library/Taps/homebrew/homebrew-cask</code><br><code>git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git</code></p>
+<p>// 最后<br><code>brew update -verbose</code></p>
+]]></content>
+      <categories>
+        <category>brew</category>
+      </categories>
+      <tags>
+        <tag>brew</tag>
+        <tag>中科大</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>微信小程序(3)-WXS语言特性</title>
     <url>/2020/09/29/weapp-wxml-3/</url>
     <content><![CDATA[<p>wxs 是weixin script。</p>
