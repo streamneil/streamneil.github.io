@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CoreJava(一)-如何给别人讲述下你所理解的Java平台？</title>
+    <title>brew更换成中科大源</title>
     <url>/2021/03/04/brew-change/</url>
     <content><![CDATA[<p>// 替换brew.git:<br><code>cd &quot;$(brew --repo)&quot;</code><br><code>git remote set-url origin https://mirrors.ustc.edu.cn/brew.git</code></p>
 <p>// 替换homebrew-core.git:<br><code>cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;</code><br><code>git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git</code></p>

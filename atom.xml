@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://neilli.cn/"/>
-  <updated>2021-03-04T01:12:08.883Z</updated>
+  <updated>2021-03-04T06:12:59.736Z</updated>
   <id>https://neilli.cn/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>CoreJava(一)-如何给别人讲述下你所理解的Java平台？</title>
+    <title>brew更换成中科大源</title>
     <link href="https://neilli.cn/2021/03/04/brew-change/"/>
     <id>https://neilli.cn/2021/03/04/brew-change/</id>
     <published>2021-03-04T00:28:00.000Z</published>
-    <updated>2021-03-04T01:12:08.883Z</updated>
+    <updated>2021-03-04T06:12:59.736Z</updated>
     
     <content type="html"><![CDATA[<p>// 替换brew.git:<br><code>cd &quot;$(brew --repo)&quot;</code><br><code>git remote set-url origin https://mirrors.ustc.edu.cn/brew.git</code></p><p>// 替换homebrew-core.git:<br><code>cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;</code><br><code>git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git</code></p><p>// 替换homebrew-cask.git:<br><code>cd &quot;$(brew --repo)&quot;/Library/Taps/homebrew/homebrew-cask</code><br><code>git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git</code></p><p>// 最后<br><code>brew update -verbose</code></p>]]></content>
     
