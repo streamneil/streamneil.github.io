@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://neilli.cn/2020/04/09/version-rule/</loc>
+    
+    <lastmod>2021-03-17T08:55:16.618Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://neilli.cn/2020/09/28/guanli-how-to-corer/</loc>
     
-    <lastmod>2021-03-16T05:55:23.845Z</lastmod>
+    <lastmod>2021-03-16T05:55:40.649Z</lastmod>
     
   </url>
   
@@ -166,13 +173,6 @@
     <loc>https://neilli.cn/2019/12/22/corejava-7-concurrent/</loc>
     
     <lastmod>2020-04-21T02:18:35.676Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://neilli.cn/2020/04/09/version-rule/</loc>
-    
-    <lastmod>2020-04-09T07:58:02.588Z</lastmod>
     
   </url>
   

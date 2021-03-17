@@ -780,24 +780,11 @@
 <td style="text-align:center">neil</td>
 <td style="text-align:center">2019.04.09</td>
 </tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
 </tbody>
 </table>
 <p><a name="FaPKF"></a></p>
 <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>中台部门是一个公司的重要支撑部门，我们的服务能力要被各团队使用。所以，提供一个规范、可读性较强的版本号能很大程度减少关于Api版本号上的沟通，也更好的能针对特定版本的问题进行排查和沟通。<br><a name="a2cGK"></a></p>
-<h1 id="命名格式"><a href="#命名格式" class="headerlink" title="命名格式"></a>命名格式</h1><p>项目版本号命名格式：<code>2.0.1.20200409_r2ae631e</code>，依次为：<code>主版本号</code>.<code>次版本号</code>.<code>发布版本号</code>.<code>日期</code> _ <code>希腊字母版本号</code> <code>git commit id</code><br></p>
+<h1 id="命名格式"><a href="#命名格式" class="headerlink" title="命名格式"></a>命名格式</h1><p>项目版本号命名格式：<code>2.0.1.12_r2ae631e</code>，依次为：<code>主版本号</code>.<code>次版本号</code>.<code>发布版本号</code>.<code>修订版本号</code> _ <code>希腊字母版本号</code> <code>git commit id</code><br></p>
 <p><a name="XrbKJ"></a></p>
 <h1 id="详细说明"><a href="#详细说明" class="headerlink" title="详细说明"></a>详细说明</h1><table>
 <thead>
@@ -820,8 +807,8 @@
 <td style="text-align:center">每次更新时，在<code>里程碑</code>版本内，固定加1</td>
 </tr>
 <tr>
-<td style="text-align:center">日期</td>
-<td style="text-align:center">记录日期</td>
+<td style="text-align:center">修订版本号</td>
+<td style="text-align:center">修订版本号，固定+1</td>
 </tr>
 <tr>
 <td style="text-align:center">希腊字母版本号</td>
