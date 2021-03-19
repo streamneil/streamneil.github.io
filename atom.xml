@@ -461,9 +461,9 @@
     
       <category term="Java" scheme="https://neilli.cn/tags/Java/"/>
     
-      <category term="内存诊断" scheme="https://neilli.cn/tags/%E5%86%85%E5%AD%98%E8%AF%8A%E6%96%AD/"/>
-    
       <category term="JVM" scheme="https://neilli.cn/tags/JVM/"/>
+    
+      <category term="内存诊断" scheme="https://neilli.cn/tags/%E5%86%85%E5%AD%98%E8%AF%8A%E6%96%AD/"/>
     
   </entry>
   
