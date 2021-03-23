@@ -837,6 +837,26 @@
       </tags>
   </entry>
   <entry>
+    <title>10秒加速你的github访问速度</title>
+    <url>/2020/03/23/jiasu-github/</url>
+    <content><![CDATA[<p>访问国内网站、google秒开，但是访问github经常出现卡顿、龟速，即使开了vpn也不行。急毛的一米。</p>
+<p>看下面你有解药了.</p>
+<h2 id="一、查询-github-DNS"><a href="#一、查询-github-DNS" class="headerlink" title="一、查询 github DNS"></a>一、查询 github DNS</h2><p><a href="http://tool.chinaz.com/dns/?type=1&amp;host=github.com&amp;ip=" target="_blank" rel="noopener">http://tool.chinaz.com/dns/?type=1&amp;host=github.com&amp;ip=</a></p>
+<p><img src="github-js.png" alt=""></p>
+<h2 id="二、选择就近加速的-DNS"><a href="#二、选择就近加速的-DNS" class="headerlink" title="二、选择就近加速的 DNS"></a>二、选择就近加速的 DNS</h2><p>根据上面查询出 TTL 越小的值，速度越快。</p>
+<h2 id="三、配置-host"><a href="#三、配置-host" class="headerlink" title="三、配置 host"></a>三、配置 host</h2><p><code>sudo vi /etc/hosts</code></p>
+<p>我是mac，win自己想办法。</p>
+<h2 id="四、刷新-DNS"><a href="#四、刷新-DNS" class="headerlink" title="四、刷新 DNS"></a>四、刷新 DNS</h2><p><code>dscacheutil -flushcache</code></p>
+<p>再打开你的 github 秒开…</p>
+]]></content>
+      <categories>
+        <category>github</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CoreJava(7) - 从ConcurrentHashMap谈线程安全</title>
     <url>/2019/12/22/corejava-7-concurrent/</url>
     <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>在前面讲了<code>HashMap</code>、<code>HashTable</code>我们对这样的键值对集合有一定的了解，今天我们再讲一个<code>线程安全</code>的集合：<code>ConcurrentHashMap</code>。然后分析下其实如何实现线程安全的呢？</p>
