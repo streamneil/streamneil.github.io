@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://neilli.cn/"/>
-  <updated>2021-03-23T07:14:52.104Z</updated>
+  <updated>2021-03-23T11:33:59.949Z</updated>
   <id>https://neilli.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>团队出了生产事故，该不该罚钱或严重问责。</title>
+    <link href="https://neilli.cn/2021/03/23/thinking-in-prod-acc/"/>
+    <id>https://neilli.cn/2021/03/23/thinking-in-prod-acc/</id>
+    <published>2021-03-23T10:55:50.000Z</published>
+    <updated>2021-03-23T11:33:59.949Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天我们团队出现了一次生产事故，严重影响客户满意度（因为习大大今天在福建视察）。但是，没有罚钱，被要求书面深刻检讨。</p><p>在此之前，我们团队的小伙伴临时替运营研发部门维护一场抽奖活动，由于周5双方都对服务器进行部署、升级等，最终导致了抽奖出现问题，这次我们组小伙伴被罚钱了，我和我们CTO都被罚钱了。</p><p>从那时起，我就在思考公司这项制度。<code>研发出了生产事故，就应该被罚钱吗？</code></p><p>其实，我相信很多公司都会这样做？有奖有惩嘛。不然光有绩效奖励，出了事故没有人负责，那咋成啊。开始我也是这么认为的，三国中，将军败仗要被砍头问罪的，所以罚钱算啥。你负责的事情，出了事故，你就是不够认真、负责，导致事故发生，造成严重影响，就该被罚钱。</p><p>但是，抽奖活动结束后，小伙伴找到我，问：何时把事情交接出去啊？下周又有活动了。 我一听，明显的是感觉出我们小伙伴是感觉，这不是他的事情，是临时安排或主动要求顶替负责的，出了事故却要罚钱… 我情愿少干一点，也不要担此风险。”多做多错，少做少错”嘛。</p><h2 id="思考问题本质"><a href="#思考问题本质" class="headerlink" title="思考问题本质"></a>思考问题本质</h2><p>罚钱或者严重书面检讨的目的或初衷，是为了让大家引擎对问题的重视，保证不会再重复犯错或降低犯错次数，公司肯定不会为了罚钱增收或恶心大家。</p><p>罚钱确实能让大家引起对问题的重视。一旦全员通报，大家都会知道，你看，生产事故要被罚钱。要注意。但是，问题解决了吗？或者说保证了问题不会重复犯或减少犯了吗？好像没有很系统或专业的去做、去引导大家如何做，也没有从本质解决问题。</p><p>试问我自己：<br>如果换成是我是负责这个，我能100%保证上面2个问题不会出现吗？<br>“当然不能！”<br>那我对待工作不够认真？不够负责？我没有责任心？<br>“那肯定也不是啊。”</p><p><strong>所以，生产环境出了问题和员工的责任心和重视度无关。</strong></p><p>那你说咋整？</p><p>出了生产事故，公司一味的去罚钱或严重的书面全员检讨，无意于从根本上解决问题，也是一种管理上懒惰的表现。</p><p><strong>员工的一切的问题，都是管理的问题。</strong></p><p>所以，此问题的本质是要求管理者要能从根本上、体系化解决此问题。当然，如果罚钱和全员检讨能解决也行啊。</p><p>认清了此问题的本质，那就好办了。</p><h2 id="团队氛围"><a href="#团队氛围" class="headerlink" title="团队氛围"></a>团队氛围</h2><p>我一直试图营造的团队氛围是：自驱、协同、成长型。估计大家主动担当，不要只关注自己的一亩三分地；公司价值观也是主动担当。所以，我们要鼓励大家去犯错、试错；不能怕生产事故影响客户口碑，而畏首畏尾，俗话说你怕什么就回来什么。</p><p>生产事故处理具体措施：</p><ol><li>按《星云生产事故复盘模板V1.0.0_20210323.doc》复盘；</li><li>提出至少8个具体改进措施；</li><li>保证每个改进措施不会重犯；</li><li>鼓励大家试错和犯错，但是要对客户有敬畏之心；</li><li>生产事故管理领导重视，形式月度、季度数据；</li><li>复盘仪式严肃，不可形于表面；</li><li>措施及时检查和汇报结果；</li></ol><h2 id="生产事故复盘tips"><a href="#生产事故复盘tips" class="headerlink" title="生产事故复盘tips"></a>生产事故复盘tips</h2><ol><li>复盘时间控制在30min以内；</li><li>明确事故责任人，仅1人；</li><li>事故复盘语气肯定，不拖沓；</li><li>复盘会必须要所有的事情明确清楚，不可再次会议确认，要求组织者明确目标；</li><li>事故复盘不是问责讨论会，注意掌控氛围和参会人的言词；</li><li>明确的改进措施，以及明确负责人和时间，制定目标（符合SMART原则）；</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      公司有个制度，如何出了严重的生产事故，具体责任方(研发)、直属领导、总监连坐罚钱...
+    
+    </summary>
+    
+    
+      <category term="管理" scheme="https://neilli.cn/categories/%E7%AE%A1%E7%90%86/"/>
+    
+    
+      <category term="管理" scheme="https://neilli.cn/tags/%E7%AE%A1%E7%90%86/"/>
+    
+      <category term="生产事故" scheme="https://neilli.cn/tags/%E7%94%9F%E4%BA%A7%E4%BA%8B%E6%95%85/"/>
+    
+  </entry>
   
   <entry>
     <title>10秒加速你的github访问速度</title>
@@ -484,36 +509,9 @@
     
       <category term="Java" scheme="https://neilli.cn/tags/Java/"/>
     
-      <category term="JVM" scheme="https://neilli.cn/tags/JVM/"/>
-    
       <category term="内存诊断" scheme="https://neilli.cn/tags/%E5%86%85%E5%AD%98%E8%AF%8A%E6%96%AD/"/>
     
-  </entry>
-  
-  <entry>
-    <title>CoreJava(9) - 谈谈 Java JVM（一）</title>
-    <link href="https://neilli.cn/2020/05/14/corejava-9-jvm1/"/>
-    <id>https://neilli.cn/2020/05/14/corejava-9-jvm1/</id>
-    <published>2020-05-14T06:52:40.000Z</published>
-    <updated>2020-06-03T09:25:49.935Z</updated>
-    
-    <content type="html"><![CDATA[<p>我们都知道 Java 里面有垃圾回收，有了它，我们在码 Java 代码的时候确实省了不少事情。但是，如果我们仅仅停留在让垃圾回收来给我们管理我们的内存的话，那我们的只能写出一般般的程序。所以，如果想要能设计高扩展性以及对性能和内存调优有更好要求的小伙伴来说，熟悉 JVM 及其内存结果和工作机制，是必不可少的。</p><h1 id="内存区域"><a href="#内存区域" class="headerlink" title="内存区域"></a>内存区域</h1><h2 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h2><p>又称PC寄存器（Program Counter Register）。在 JVM 中每个线程都有一个程序计数器。那为什么每个线上都要有这么一个计数器呢？弄清这个问题，首先我们要先想下在 JVM 多线程内部机制是怎样的？ 多线程，它不是这些线程同时在执行，而是同时只有1个线程在执行，通过线程轮流切换来获得 CPU 的执行时间。线程在执行的时候（也就是 CPU 执行指令时），它就是从当前线程的 PCG(Program Counter Register) 中来获取当前需要执行 JVM 指令的地址的。</p><p>总结一句话：程序计数器就是用来存储当前线程正在执行的 Java 方法的 JVM 指令地址。这样我们可以得出，如果当前线程执行的是本地方法，那程序计数器的值就是undefind。</p><p>再想一个问题，在多线程，如果线程 A 执行方法 a(), 当前线程切换到 B 执行完方法 b(), 此时线程再切换到 A 去执行 a(), 其结果，我们都知道是之前是一样的，这是为什么呢？</p><p>这就是程序计数器的功劳。因为每个线程都有一个独立的程序计数器，当线程执行完，CPU 发出线程切换后，上一个线程的程序计数器会回复到其执行之前的状态。当下次再轮到它执行时，它还能保持和第一次执行的状态一样。神不神奇？ 还有神奇的是：程序计数器永远不会 OOM。因为其存储的数据大小是固定的，不会因为方法和线程的执行而发生变化的。这个也能想明白。所以，当面试官问你：程序计数器在何时会 OOM 时。你要当心掉坑里啊。</p><h2 id="Java-虚拟栈"><a href="#Java-虚拟栈" class="headerlink" title="Java 虚拟栈"></a>Java 虚拟栈</h2><p>Java Virtual Machine Stack，线程在创建的时候都会创建一个 Java 虚拟栈，方法在执行前会先创建一个栈帧。栈帧是什么呢？ 它是一个数据集结构，里面有局部变量表、操作数栈、动态链接、方法正常出口和异常出口。</p><p>在前面我们讲了 CPU 在执行的时候只能一个线程一个线程的执行，在执行的线程成为‘当前线程’；同理，那在执行的方法也称为‘当前方法’；方法在执行之前会先创建一个栈帧，那此栈帧就称为‘当前栈帧’，在栈顶的位置；所以，方法的执行的过程其实就是：栈帧创建、栈帧压栈和出栈的过程。结合前面的 PCG 我们可以更清楚的知道：当 CPU 要执行执行时，从<code>当前线程</code>的 PCG 去获取当前需要执行的 JVM 指令地址就是 <code>当前栈帧</code>。</p><p>有同学可能会问：如果在执行<code>当前方法</code>时，方法内部再去调用其他类的方法呢？ 同理，它新的栈帧就会被创建，然后被压如栈顶。直到方法执行结束再把栈顶的栈帧出栈。</p><h3 id="局部变量表"><a href="#局部变量表" class="headerlink" title="局部变量表"></a>局部变量表</h3><p>它是变量值的存储空间，用来存放方法的参数和方法中定义的局部变量。在 java 被编译成 class 文件时，该容量大小已经被明确；</p><h3 id="操作数栈"><a href="#操作数栈" class="headerlink" title="操作数栈"></a>操作数栈</h3><p>它是一个栈，用来存储方法执行过程中往里面放元素，原则上，它可以是任意 java 类型。它也和局部变量表一样，在编译时已经确认其大小。</p><p>咦，前面刚明白了<code>局部变量表</code>用来存放变量的，怎么<code>操作数栈</code>也是用来存这些数据的呢？是不是有点迷糊？</p><h3 id="动态链接"><a href="#动态链接" class="headerlink" title="动态链接"></a>动态链接</h3><p>每个栈帧都包含一个执行运行时常量池中该栈帧所属方法的引用，持有这个引用是为了支持方法调用过程中的动态连接（Dynamic Linking）。</p><p>理解抽象？</p><p>举例吧。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">implements</span> <span class="title">Animal</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Pig</span> <span class="keyword">implements</span> <span class="title">Animal</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Animal</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Dog a = <span class="keyword">new</span> Dog();</span><br><span class="line"></span><br><span class="line">Animal b = <span class="keyword">new</span> Dog();</span><br></pre></td></tr></table></figure><p>在编译期 a 已经知道了自己‘是条狗’，但是 b 在编译期是不知道是狗还是猪。只有在运行期间才知道自己是条狗。</p><p>所以，这部分引用只有在运行期间才能转化的直接引用，称为动态链接。</p><h3 id="方法出口"><a href="#方法出口" class="headerlink" title="方法出口"></a>方法出口</h3><p>很好理解就是方法的正常返回和异常退出2种出口；</p><h2 id="堆-heap"><a href="#堆-heap" class="headerlink" title="堆(heap)"></a>堆(heap)</h2><p>堆是 java 内存的核心区域。也是 jvm 重点照顾的对象。用来存放 java 实例的，几乎所有的被创建的 java 实例和数组都被存放在此处。不同于前面2位是线程独有的，而堆是每个线程都共享的区域。其分为：新生代和老年代。</p><p>  我们可以在 jvm 启动的时候，通过<code>-Xxm:</code>来指定最大堆内存空间。</p><h2 id="方法区-Method-Area"><a href="#方法区-Method-Area" class="headerlink" title="方法区(Method Area)"></a>方法区(Method Area)</h2><p>是线程共享区域，用于存储元数据，比如类的结构信息，以及对应的运行时常量池、字段、方法代码等。在方法区内部还有一个<code>运行时常量池</code>，这里存储的时各种常量信息，不管是编译事情的字面量，还是运行期的符号引用。</p><p>早期大家喜欢把方法区称为永久代，但是从 JDK8 永久代就被 元数据区（Metaspace）取代了。</p><h2 id="本地方法栈（Native-Method-Stack）"><a href="#本地方法栈（Native-Method-Stack）" class="headerlink" title="本地方法栈（Native Method Stack）"></a>本地方法栈（Native Method Stack）</h2><p>是线程私有的。顾名思义，是支持本地方法调用的。</p><h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><h2 id="OOM场景有哪些？"><a href="#OOM场景有哪些？" class="headerlink" title="OOM场景有哪些？"></a>OOM场景有哪些？</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">堆溢出：java.lang.OutOfMemoryError: Java heap space</span><br><span class="line">栈溢出：java.lang.StackOverflowError</span><br><span class="line">永久代溢出：java.lang.OutOfMemoryError: PermGen space</span><br></pre></td></tr></table></figure><h2 id="那什么是OOM？会发生在哪些内存区域呢？"><a href="#那什么是OOM？会发生在哪些内存区域呢？" class="headerlink" title="那什么是OOM？会发生在哪些内存区域呢？"></a>那什么是OOM？会发生在哪些内存区域呢？</h2><p>通俗一点的说就是 JVM 内存不够用了， GC也不能提供更多的内存所以就报 OOM。所以，在 OOM 之前基本都会触发 GC。但是，也不是任何情况下 OOM 都会触发 GC。比如我们要分配一个超级大的数组其超过堆的最大值，JVM 会判断即使它调用了 GC 回收一次内存也无法给你分配你要的内存，所以，干脆直接报 OOM。</p><p>经过上面的了解，我们大致可以知道可能发生 OOM 有哪些区域：除了程序计数器之外，其他的任何区域都有可能发生 OOM。</p><ul><li>首先是<code>堆溢出: java.lang.OutOfMemoryError: Java heap space</code>。可能是堆内存泄露；或者是上面的例子，堆内存分配过小；程序问题导致 JVM 处理对象引用不及时，导致对象无法回收，内存堆积；</li><li>Java 虚拟栈和本地方法栈的<code>栈溢出：java.lang.StackOverflowError</code>。这个原因可能是我们程序有递归的方法，由于某种原因没有退出，而不停的压栈，导致栈溢出。我们还是知道在这个时候，如果 JVM 试图去扩展栈的大小，如果内存不够也会报 OOM，所以，就有时候为何无限递归也会报 OOM，原来如此啊。</li><li>老版 JDK（5，6或之前）因为永久代的大小是有限的，JVM 对永久代的 GC 不是很频繁，因为其存储的时一些常量和类信息，如果在一些运行期大量生产动态类型的场景，就可能报出<code>永久代溢出：java.lang.OutOfMemoryError: PermGen space</code>。但是，现在永久代已经被元数据区取代了，方法区内存就据说比之前增大了不少。先如果方法区报OOM会是：<code>元数据溢出：java.lang.OutOfMemoryError: Metaspace</code>。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      这段时间又逼迫自己写东西了。本来想总结下线程方法的，但是发现线程涉及到太多的 JVM 内存方面的知识，所以，最近先把 JVM 相关知识复习下。
-    
-    </summary>
-    
-    
-      <category term="Java" scheme="https://neilli.cn/categories/Java/"/>
-    
-    
-      <category term="Java" scheme="https://neilli.cn/tags/Java/"/>
-    
       <category term="JVM" scheme="https://neilli.cn/tags/JVM/"/>
-    
-      <category term="内存" scheme="https://neilli.cn/tags/%E5%86%85%E5%AD%98/"/>
     
   </entry>
   
