@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://neilli.cn/"/>
-  <updated>2021-03-24T01:27:28.515Z</updated>
+  <updated>2021-03-30T01:45:54.607Z</updated>
   <id>https://neilli.cn/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>团队管理-如何去和小伙伴谈绩效</title>
+    <link href="https://neilli.cn/2021/03/29/how-to-change/"/>
+    <id>https://neilli.cn/2021/03/29/how-to-change/</id>
+    <published>2021-03-29T14:42:40.000Z</published>
+    <updated>2021-03-30T01:45:54.607Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="世界上唯一不变的就是变化本身"><a href="#世界上唯一不变的就是变化本身" class="headerlink" title="世界上唯一不变的就是变化本身"></a>世界上唯一不变的就是变化本身</h1><p>「世界上唯一不变的就是变化本身」。这句名言来源于希腊哲学家赫拉-克利特。他深信世界上的一切事物都是在持续的变化中。我们当下身处的环境，无时无刻不再印证着这个观点。</p><p>移动互联网，又无疑像一剂催化剂，加速了我们所处的这个行业变化的速度和频率。</p><p>也有的像诺基亚一样（“我们并没有做错什么，但不知为什么，我们输了。” ）。是的，当我们追求稳定不变的同时，其实我们正在被慢慢改变的环境所淘汰，只是我们现在还没发现而已，不过等你有所察觉，为时已晚。</p><p>在 VUCA 时代的今天，无论是企业还是个人都面对着同样的挑战。不愿意拥抱变化、不主动提高自己应变能力，下次”疫情”时，谁知道情况会怎样。只有不断的提升自己的核心竞争力、主动去探索未知、主动去面对不确定性，你才会发现原来「车到山前必有路」这句话是真的。</p><p>我是2012年来厚建。记得前几年，公司每年都会做一次组织架构调整。每次调整都伴随着人员的增多，从二三十人到五六十人，再到一百多人，到现在的二三百人；业务也是从数十家客户做到二三百家；公司从软件到云计算；产品从livCMS到M2O，再到M2o+、短书、爱秀… 公司一直在快速的变化着，也是在那个时候公司明确出 H O G E：How To Change? 的 slogan。</p><p>「怎么去改变？」「怎么去改变？」无时无刻不再提醒着厚建应该主动去寻求改变。当然，在前进的过程中，我们也走过弯路，但是，主动探索、寻求改变的决心已经深深印在每个厚建人的心底。估计正因如此才使得在当今互联网公司平均寿命只有三到五年的今天，厚建能稳定发展十七年，我们相信，她还将继续焕发新的活力，走出新的篇章。</p>]]></content>
+    
+    <summary type="html">
+    
+      车道山前必有路，说起来轻松。
+    
+    </summary>
+    
+    
+      <category term="认知" scheme="https://neilli.cn/categories/%E8%AE%A4%E7%9F%A5/"/>
+    
+    
+      <category term="认知" scheme="https://neilli.cn/tags/%E8%AE%A4%E7%9F%A5/"/>
+    
+  </entry>
+  
+  <entry>
     <title>团队出了生产事故，该不该罚钱或严重问责。</title>
     <link href="https://neilli.cn/2021/03/23/thinking-in-prod-acc/"/>
     <id>https://neilli.cn/2021/03/23/thinking-in-prod-acc/</id>
     <published>2021-03-23T10:55:50.000Z</published>
-    <updated>2021-03-24T01:27:28.515Z</updated>
+    <updated>2021-03-27T02:07:02.127Z</updated>
     
     <content type="html"><![CDATA[<p>今天我们团队出现了一次生产事故，严重影响客户满意度。但是，没有罚钱，被要求书面深刻检讨。</p><p>在此之前，我们团队的小伙伴临时替运营研发部门维护一场抽奖活动，由于周5双方都对服务器进行部署、升级等，最终导致了抽奖出现问题，这次我们组小伙伴被罚钱了，我和我们CTO都被罚钱了。</p><p>从那时起，我就在思考公司这项制度。<code>研发出了生产事故，就应该被罚钱吗？</code></p><p>其实，我相信很多公司都会这样做？有奖有惩嘛。不然光有绩效奖励，出了事故没有人负责，那咋成啊。开始我也是这么认为的，三国中，将军败仗要被砍头问罪的，所以罚钱算啥。你负责的事情，出了事故，你就是不够认真、负责，导致事故发生，造成严重影响，就该被罚钱。</p><p>但是，抽奖活动结束后，小伙伴找到我，问：何时把事情交接出去啊？下周又有活动了。 我一听，明显的是感觉出我们小伙伴是感觉，这不是他的事情，是临时安排或主动要求顶替负责的，出了事故却要罚钱… 我情愿少干一点，也不要担此风险。”多做多错，少做少错”嘛。</p><h2 id="思考问题本质"><a href="#思考问题本质" class="headerlink" title="思考问题本质"></a>思考问题本质</h2><p>罚钱或者严重书面检讨的目的或初衷，是为了让大家引擎对问题的重视，保证不会再重复犯错或降低犯错次数，公司肯定不会为了罚钱增收或恶心大家。</p><p>罚钱确实能让大家引起对问题的重视。一旦全员通报，大家都会知道，你看，生产事故要被罚钱。要注意。但是，问题解决了吗？或者说保证了问题不会重复犯或减少犯了吗？好像没有很系统或专业的去做、去引导大家如何做，也没有从本质解决问题。</p><p>试问我自己：<br>如果换成是我是负责，能保证100%不会有问题吗？<br>“当然不能！”<br>那我对待工作不够认真？不够负责？不够重视？我没有责任心？<br>“那肯定也不是啊。”</p><p><strong>所以，生产环境出了问题和员工的责任心和重视度无关。</strong></p><p>那你说咋整？</p><p>出了生产事故，公司一味的去罚钱或严重的书面全员检讨，无意于从根本上解决问题，也是一种管理上懒惰的表现。</p><p><strong>员工的一切的问题，都是管理的问题。</strong></p><p>所以，此问题的本质是要求管理者要能从根本上、体系化解决此问题。当然，如果罚钱和全员检讨能解决也行啊。</p><p>认清了此问题的本质，那就好办了。</p><h2 id="团队氛围"><a href="#团队氛围" class="headerlink" title="团队氛围"></a>团队氛围</h2><p>我一直试图营造的团队氛围是：自驱、协同、成长型。鼓励大家主动担当，不要只关注自己的一亩三分地；公司价值观也是主动担当。如果罚钱、严重问责，大家无形之中就会给自己划定边界、情愿少做事，也不想犯错。这与我们团队氛围和价值观就严重不符。<br>所以，我们要倡导鼓励大家去犯错、试错；不能怕生产事故影响客户口碑，而畏首畏尾，俗话说你怕什么就回来什么…</p><p>看到本质了，咋办呢？</p><p>今天我大致整理如下思路，供大家讨论：</p><ol><li>按《星云生产事故复盘模板V1.0.0_20210323.doc》复盘；</li><li>提出至少8个具体改进措施；</li><li>保证每个改进措施不会重犯；</li><li>鼓励大家试错和犯错，但是要对客户有敬畏之心；</li><li>生产事故管理领导重视，形式月度、季度数据；</li><li>复盘仪式严肃，不可形于表面；</li><li>措施及时检查和汇报结果；</li></ol><h2 id="生产事故复盘tips"><a href="#生产事故复盘tips" class="headerlink" title="生产事故复盘tips"></a>生产事故复盘tips</h2><ol><li>复盘时间控制在30min以内；</li><li>明确事故责任人，仅1人；</li><li>事故复盘语气肯定，不拖沓；</li><li>复盘会必须要所有的事情明确清楚，不可再次会议确认，要求组织者明确目标；</li><li>事故复盘不是问责讨论会，注意掌控氛围和参会人的言词；</li><li>明确的改进措施，以及明确负责人和时间，制定目标（符合SMART原则）；</li><li>形成文档、数据化；</li></ol>]]></content>
     
@@ -485,33 +508,6 @@
       <category term="管理" scheme="https://neilli.cn/tags/%E7%AE%A1%E7%90%86/"/>
     
       <category term="绩效" scheme="https://neilli.cn/tags/%E7%BB%A9%E6%95%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CoreJava(10） - 谈谈 Java JVM（二）</title>
-    <link href="https://neilli.cn/2020/06/01/corejava-10-jvm2/"/>
-    <id>https://neilli.cn/2020/06/01/corejava-10-jvm2/</id>
-    <published>2020-05-31T16:32:40.000Z</published>
-    <updated>2020-07-21T12:05:05.313Z</updated>
-    
-    <content type="html"><![CDATA[<p>如何观察 JVM 堆内存的使用情况，成了我们日常排查问题很重要的手段。大致如下：</p><ul><li>JConsole（堆内存、堆外内存）、VisualM 它们是直接连接 Java 进程，然后在图形化界面掌握内存情况。</li><li>jstat、jmap命令行工具进行查询 - 堆、方法区；</li><li>GC 日志；</li><li>NMT（堆外内存的直接内存）；</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-XX:NativeMemoryTracking=summary</span><br></pre></td></tr></table></figure><p>默认是关闭。</p><h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><h3 id="堆外内存"><a href="#堆外内存" class="headerlink" title="堆外内存"></a>堆外内存</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>内存对象分配在JVM中堆以外的内存，也可以称为直接内存，这些内存直接受操作系统管理（而不是JVM），这样做的好处是能够在一定程度上减少垃圾回收对应用程序造成的影响。一般我们使用Unsafe和NIO包下ByteBuffer来创建堆外内存。</p><h4 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h4><ul><li>减少 GC</li><li>提高 IO 效率</li></ul><h3 id="堆内存"><a href="#堆内存" class="headerlink" title="堆内存"></a>堆内存</h3><p>从年代角度划分：新生代、老年代、永久代；</p><h4 id="新生代"><a href="#新生代" class="headerlink" title="新生代"></a>新生代</h4><p>绝大多数的对象的创建和销毁的区域，在通常Java应用中，绝大多数对象的生命周期都是很短暂的。</p><h4 id="老年代"><a href="#老年代" class="headerlink" title="老年代"></a>老年代</h4><p>放置长生命周期的对象，通常都是从Survivor区域拷贝过来的对象。有特殊情况，如果对象过大，会分配到新生代eden其他位置；如果过大，无法在新生代找到足够长的连续空间，JVM 会直接分配到老年代。</p><h4 id="永久代"><a href="#永久代" class="headerlink" title="永久代"></a>永久代</h4><p>存储 Java 元数据、常量池、Inter字符串缓存。jdk8就没有永久代了。</p><h4 id="TLAB"><a href="#TLAB" class="headerlink" title="TLAB"></a>TLAB</h4><p>Thread Local Allocation Buffer, JVM 为每个线程分配一个私有内存区域，因为多个线程同时操作时，为了避免操作同一地址，可能使用加锁机制，进而影响分配速度。</p>]]></content>
-    
-    <summary type="html">
-    
-      这段时间中台的 Java 服务正式运行了，但是遇到些问题，不时有的服务会停止；或者有的 PHP 服务的心跳不正常，所以，从 Java 服务角度，是要看下其内存的使用情况，也是排查问题手段之一吧。所以，趁机梳理和归纳了监控和诊断 JVM 内存的工具和方法，以供部门人员日后学习。
-    
-    </summary>
-    
-    
-      <category term="Java" scheme="https://neilli.cn/categories/Java/"/>
-    
-    
-      <category term="Java" scheme="https://neilli.cn/tags/Java/"/>
-    
-      <category term="JVM" scheme="https://neilli.cn/tags/JVM/"/>
-    
-      <category term="内存诊断" scheme="https://neilli.cn/tags/%E5%86%85%E5%AD%98%E8%AF%8A%E6%96%AD/"/>
     
   </entry>
   
