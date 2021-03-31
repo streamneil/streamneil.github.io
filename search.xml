@@ -212,8 +212,8 @@
         <category>管理</category>
       </categories>
       <tags>
-        <tag>管理</tag>
         <tag>认知</tag>
+        <tag>管理</tag>
       </tags>
   </entry>
   <entry>
@@ -1244,8 +1244,8 @@
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>JVM</tag>
         <tag>线程安全</tag>
+        <tag>JVM</tag>
       </tags>
   </entry>
   <entry>
