@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://neilli.cn/"/>
-  <updated>2021-08-17T02:04:22.118Z</updated>
+  <updated>2021-08-17T02:39:12.839Z</updated>
   <id>https://neilli.cn/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://neilli.cn/2021/08/11/weapp-hcj/"/>
     <id>https://neilli.cn/2021/08/11/weapp-hcj/</id>
     <published>2021-08-11T15:51:50.000Z</published>
-    <updated>2021-08-17T02:04:22.118Z</updated>
+    <updated>2021-08-17T02:39:12.839Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>前端时间和我弟聊天，他现在有几辆货车每天都要发货，现在是用账本记账，到了月底统计很麻烦，有时还会丢账。如果再让其他车辆发货，总共10到15辆车，记账就更复杂，每天小账本密密麻麻，还经常担心把账本弄丢了。</p><p>弄明白背景，就好办了。</p><h2 id="交互原型设计"><a href="#交互原型设计" class="headerlink" title="交互原型设计"></a>交互原型设计</h2><p><a href="https://q885vc.axshare.com/#id=v06qpp&amp;p=%E6%98%8E%E7%BB%86%E9%A6%96%E9%A1%B5" target="_blank" rel="noopener">交互原型</a></p><p>大概花了2天时间。</p><h2 id="已上线小程序"><a href="#已上线小程序" class="headerlink" title="已上线小程序"></a>已上线小程序</h2><p>先看成品吧</p><h2 id><a href="#" class="headerlink" title></a><img src="gh_b548024de613_430.jpg" alt></h2><p><strong>预览</strong><br><img src="1.jpeg" alt><br><img src="2.jpeg" alt><br><img src="3.jpeg" alt><br><img src="4.jpeg" alt></p><p>小程序之前开发过，这次捡起来速度快一点。不过，我对UI细节要求非常高，在最后打磨细节上画了点时间。其他的还好。</p><p>目前小程序是挂载到公司已认证的公众号下面。算是嫖了下公司吧（50个免费小程序名额用不完），后期可以迁走。</p><h2 id="运行成本"><a href="#运行成本" class="headerlink" title="运行成本"></a>运行成本</h2><p>服务端目前用户量非常少，纯数字，比较少。</p><h2 id="后期规划"><a href="#后期规划" class="headerlink" title="后期规划"></a>后期规划</h2><p>看使用的人数，再加入其它的货源或车源的UGC模块。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>前端时间和我弟聊天，他现在有几辆货车每天都要发货，现在是用账本记账，到了月底统计很麻烦，有时还会丢账。如果再让其他车辆发货，总共10到15辆车，记账就更复杂，每天小账本密密麻麻，还经常担心把账本弄丢了。</p><p>弄明白背景，就好办了。</p><h2 id="交互原型设计"><a href="#交互原型设计" class="headerlink" title="交互原型设计"></a>交互原型设计</h2><p><a href="https://q885vc.axshare.com/#id=v06qpp&amp;p=%E6%98%8E%E7%BB%86%E9%A6%96%E9%A1%B5" target="_blank" rel="noopener">交互原型</a></p><p>大概花了2天时间。</p><h2 id="已上线小程序"><a href="#已上线小程序" class="headerlink" title="已上线小程序"></a>已上线小程序</h2><p>先看成品吧</p><h2 id><a href="#" class="headerlink" title></a><img src="gh_b548024de613_430.jpg" alt></h2><p><strong>预览</strong><br><img src="1.jpeg" alt><br><img src="2.jpeg" alt><br><img src="3.jpeg" alt><br><img src="4.jpeg" alt></p><p>小程序之前开发过，这次捡起来速度快一点。不过，我对UI细节要求非常高，在最后打磨细节上画了点时间。其他的还好。</p><p>目前小程序是挂载到公司已认证的公众号下面。算是嫖了下公司吧（50个免费小程序名额才用了2个），后期可以迁走。</p><h2 id="运行成本"><a href="#运行成本" class="headerlink" title="运行成本"></a>运行成本</h2><p>服务端目前用户量非常少，纯数字，比较少。</p><h2 id="后期规划"><a href="#后期规划" class="headerlink" title="后期规划"></a>后期规划</h2><p>看使用的人数，再加入其它的货源或车源的UGC模块。</p>]]></content>
     
     <summary type="html">
     
