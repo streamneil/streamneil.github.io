@@ -319,20 +319,6 @@
   </url>
   
   <url>
-    <loc>https://neilli.cn/tags/Java/</loc>
-    <lastmod>2021-08-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://neilli.cn/tags/JVM/</loc>
-    <lastmod>2021-08-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://neilli.cn/tags/brew/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
@@ -347,7 +333,28 @@
   </url>
   
   <url>
+    <loc>https://neilli.cn/tags/Java/</loc>
+    <lastmod>2021-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://neilli.cn/tags/JVM/</loc>
+    <lastmod>2021-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://neilli.cn/tags/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/</loc>
+    <lastmod>2021-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://neilli.cn/tags/%E5%86%85%E5%AD%98%E8%AF%8A%E6%96%AD/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -382,7 +389,14 @@
   </url>
   
   <url>
-    <loc>https://neilli.cn/tags/%E5%86%85%E5%AD%98%E8%AF%8A%E6%96%AD/</loc>
+    <loc>https://neilli.cn/tags/%E5%86%85%E5%AD%98/</loc>
+    <lastmod>2021-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://neilli.cn/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -403,13 +417,6 @@
   </url>
   
   <url>
-    <loc>https://neilli.cn/tags/%E8%AE%A4%E7%9F%A5/</loc>
-    <lastmod>2021-08-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://neilli.cn/tags/%E8%87%AA%E5%BE%8B/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
@@ -417,14 +424,14 @@
   </url>
   
   <url>
-    <loc>https://neilli.cn/tags/github/</loc>
+    <loc>https://neilli.cn/tags/%E8%AE%A4%E7%9F%A5/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://neilli.cn/tags/%E7%BB%A9%E6%95%88/</loc>
+    <loc>https://neilli.cn/tags/github/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -466,14 +473,21 @@
   </url>
   
   <url>
-    <loc>https://neilli.cn/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <loc>https://neilli.cn/tags/%E6%88%90%E9%95%BF%E5%9E%8B%E7%BB%84%E7%BB%87/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://neilli.cn/tags/%E6%88%90%E9%95%BF%E5%9E%8B%E7%BB%84%E7%BB%87/</loc>
+    <loc>https://neilli.cn/tags/%E7%BB%A9%E6%95%88/</loc>
+    <lastmod>2021-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://neilli.cn/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -494,14 +508,7 @@
   </url>
   
   <url>
-    <loc>https://neilli.cn/tags/%E5%86%85%E5%AD%98/</loc>
-    <lastmod>2021-08-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://neilli.cn/tags/%E4%BA%BA%E6%89%8D%E5%9F%B9%E5%85%BB/</loc>
+    <loc>https://neilli.cn/tags/%E6%80%9D%E8%80%83/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -515,14 +522,7 @@
   </url>
   
   <url>
-    <loc>https://neilli.cn/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
-    <lastmod>2021-08-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://neilli.cn/tags/%E6%80%9D%E8%80%83/</loc>
+    <loc>https://neilli.cn/tags/%E4%BA%BA%E6%89%8D%E5%9F%B9%E5%85%BB/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -545,14 +545,14 @@
   </url>
   
   <url>
-    <loc>https://neilli.cn/categories/Java/</loc>
+    <loc>https://neilli.cn/categories/brew/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://neilli.cn/categories/brew/</loc>
+    <loc>https://neilli.cn/categories/Java/</loc>
     <lastmod>2021-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
