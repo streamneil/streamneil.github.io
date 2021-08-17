@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://neilli.cn/"/>
-  <updated>2021-05-18T12:09:46.621Z</updated>
+  <updated>2021-08-17T01:30:01.354Z</updated>
   <id>https://neilli.cn/</id>
   
   <author>
@@ -17,13 +17,28 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>weapp-hcj</title>
+    <link href="https://neilli.cn/2021/08/17/weapp-hcj/"/>
+    <id>https://neilli.cn/2021/08/17/weapp-hcj/</id>
+    <published>2021-08-17T01:30:01.000Z</published>
+    <updated>2021-08-17T01:30:01.354Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>【产品学习】一个完整闭环的产品原型设计</title>
     <link href="https://neilli.cn/2021/05/05/chanp-pr-demo/"/>
     <id>https://neilli.cn/2021/05/05/chanp-pr-demo/</id>
     <published>2021-05-05T07:28:00.000Z</published>
-    <updated>2021-05-18T12:09:46.621Z</updated>
+    <updated>2021-05-24T01:43:36.884Z</updated>
     
-    <content type="html"><![CDATA[<p>做研发10年了。给自己换个 title 。哈哈哈</p><p>从15年开始起，那时候开始接触产品，后来带过产品团队，更多的只是从产品和业务的全局去思考，未能真正意义上细致入微般深入闭环和测试一个场景。</p><p>1个月时间，计划每天完成2~3h，从下载 axure9 学习到把 PC 端和 手机端所有的交互原型完成，真实还原一个轻量级的知识付费 SaaS 应用。</p><p><a href="https://63vtzi.axshare.com/#id=405qyf&amp;p=%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95&amp;c=1" target="_blank" rel="noopener">PC端PR</a></p><blockquote><p>建议：MacBook PRo 15-inch 全面 Chrome 100% 缩放</p></blockquote><p><a href="https://dmyuw0.axshare.com" target="_blank" rel="noopener">手机端PR</a></p><blockquote><p>建议：MacBook PRo 15-inch 全面 Chrome 80% 缩放</p></blockquote><p>首次加载缓慢，请耐心等待。</p>]]></content>
+    <content type="html"><![CDATA[<p>做研发10年了。给自己换个 title 。哈哈哈</p><p>从15年开始起，那时候开始接触产品，后来带过产品团队，更多的只是从产品和业务的全局去思考，未能真正意义上细致入微般深入闭环和测试一个场景。</p><p>1个月时间，计划每天完成2~3h，从下载 axure9 学习到把 PC 端和 手机端所有的交互原型完成，真实还原一个轻量级的知识付费 SaaS 应用。</p><p><a href="https://63vtzi.axshare.com/#id=405qyf&amp;p=%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95&amp;c=1" target="_blank" rel="noopener">PC端PR</a></p><blockquote><p>建议：MacBook PRo 15-inch 全屏 Chrome 100% 缩放</p></blockquote><p><a href="https://dmyuw0.axshare.com" target="_blank" rel="noopener">手机端PR</a></p><blockquote><p>建议：MacBook PRo 15-inch 全屏 Chrome 80% 缩放</p></blockquote><p>首次加载缓慢，请耐心等待。</p>]]></content>
     
     <summary type="html">
     
@@ -112,8 +127,8 @@
   
   <entry>
     <title>10秒加速你的github访问速度</title>
-    <link href="https://neilli.cn/2021/03/22/jiasu-github/"/>
-    <id>https://neilli.cn/2021/03/22/jiasu-github/</id>
+    <link href="https://neilli.cn/2021/03/23/jiasu-github/"/>
+    <id>https://neilli.cn/2021/03/23/jiasu-github/</id>
     <published>2021-03-23T03:50:40.000Z</published>
     <updated>2021-03-23T07:14:52.104Z</updated>
     
@@ -210,8 +225,8 @@
   
   <entry>
     <title>brew更换成中科大源</title>
-    <link href="https://neilli.cn/2021/03/03/brew-change/"/>
-    <id>https://neilli.cn/2021/03/03/brew-change/</id>
+    <link href="https://neilli.cn/2021/03/04/brew-change/"/>
+    <id>https://neilli.cn/2021/03/04/brew-change/</id>
     <published>2021-03-04T00:28:00.000Z</published>
     <updated>2021-03-04T08:05:15.829Z</updated>
     
@@ -384,8 +399,8 @@
   
   <entry>
     <title>架构 - 分布式消息队列（一）</title>
-    <link href="https://neilli.cn/2020/09/06/architect-queue1/"/>
-    <id>https://neilli.cn/2020/09/06/architect-queue1/</id>
+    <link href="https://neilli.cn/2020/09/07/architect-queue1/"/>
+    <id>https://neilli.cn/2020/09/07/architect-queue1/</id>
     <published>2020-09-06T16:11:21.000Z</published>
     <updated>2020-09-27T13:56:19.196Z</updated>
     
@@ -479,31 +494,6 @@
       <category term="架构" scheme="https://neilli.cn/tags/%E6%9E%B6%E6%9E%84/"/>
     
       <category term="缓存" scheme="https://neilli.cn/tags/%E7%BC%93%E5%AD%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>管理思考 - 我平常在干些啥</title>
-    <link href="https://neilli.cn/2020/08/27/what-doing-as-m/"/>
-    <id>https://neilli.cn/2020/08/27/what-doing-as-m/</id>
-    <published>2020-08-27T10:19:31.000Z</published>
-    <updated>2020-09-08T03:52:48.724Z</updated>
-    
-    <content type="html"><![CDATA[<p>回到主题：做管理，平常都是干啥。其实，如果这个问题放到几年前，或许我真不知道该如何回答。</p><p>为什么呢？</p><p>或许你会想做团队管理不就是定下目标、分分任务、协调下事情、攻克难题吗？说，还能有啥~ 的确是如此，但又不是如此。</p><p>刚来公司是2012年，讲真，没想到会待公司那么多年。自己从技术做到管理；从客户端做到前端、后端；从 Java 做到了 Python、PHP、Vue；从 Android主管做到 App主管，又到部门负责人，再到公司云计算研发总监，负责研发、产品、UI、测试整体负责人，再到目前中台部架构整体负责人，经历很多，做的事情，接触到的人都很多。有年轻气盛为了一个功能的技术实现和甲、乙、丙、丁方争执一下午，也有为了一个产品流程或细节<code>指定江山不可一世</code>… 之前认为做管理不是通过学习，就是通过上面一个个活生生的例子总结的经验，所属管理就是<code>经验</code>。</p><p>刚做管理的新人，他每天做的事情基本就是上面的那些，再加上学着自己领导做些管理。</p><p>之前我对管理也是无意识，直到2015年，我的领导扔给我一本书《卓有成效的管理者》。当时，无感。2个月都没看完，实在看不下去。但是，本是好书，只是自己阅历不够，当时看不懂。后面自己慢慢的翻阅，加上自己的经历，明白了德鲁克老爷子的良苦用心：计划、组织、指挥、协调和控制。做到这5个基本要素，你得到了管理的精髓。哈哈哈。好了，这本书你可以不用看了。</p><p>或许小伙伴你会想，咦，这是不是管理的教科书呢？因为大家做技术出身，都是希望能像学技术一样获得一本《Java 葵花宝典》、《Python 入门到精通》等等类似这样的具有指导意义的<code>教科书</code>，但是很遗憾，管理上没有这样的<code>秘籍</code>。</p><p>好，那又回到正题，做管理究竟在干啥，除了上面：<code>定下目标、分分任务、协调下事情、攻克难题</code>没了吗？其实这是刚做管理的小伙伴首先想到，也是积极做的。但是，做管理远不止如此。管理的初衷是希望通过团队来协助你完成团队目标，由此可见团队至关重要。</p><p>那怎么搞团队建设呢？团队建设又称<code>团建</code>。有同学可能会说<code>团建</code>我知道，就是每月出去吃一顿。哈哈，好吧。其实很多时间我们都是这么做的。这只是团建建设的一个手段。真正的<code>团队建设</code>一定围绕着自己的<code>团队文化</code>、<code>能力梯队</code>、<code>协作沟通</code>、<code>职责分工</code>、<code>绩效激励</code>来展开，而我们比较喜欢的吃吃喝喝就是<code>协作沟通</code>的一个手段。</p><p><code>团队文化</code>如何搞呢？网上之前火了一个马云 diss <code>腾百万</code> 的一个段子：<code>如果一个企业或组织没有文化、愿景和使命，任何结合都是乌合之众</code>。所以，一个团队也是如此。或许你会说我tmd的做了几年的部门经理了，从来没想过还文化呢，不也好好的过了好几年吗？先不说这样的不好，我们可以设想如果你在这样的一个团队有什么好处：</p><ol><li>有归属感；</li><li>做事有方向、有成就感；</li></ol><p>那应该如何做呢？首先你作为此团队负责人，第一要明确公司成立此团队的目的是什么？是为了解决什么问题的？实现什么价值的？然后你基于此上升到部门的使命和愿景，从而形成部门文化。一旦明确文化方向，你坚持做下去，文化是个长久的，可能需要几个月的时间大家才有感觉。一旦发现团队有不适合此文化的，立刻开除。前提是和领导确认你的文化是否正确、以及他是否真的不适合此文化。</p><p><code>绩效激励</code>就不说了吧。绩效是只能给团队表现优异的人，要少~ 如何谈绩效之前有聊过<a href="https://www.neilli.cn/2020/08/24/how-to-jixiao/" target="_blank" rel="noopener">如何谈绩效</a>。</p><p><code>能力梯队</code>，如果一个团队要想持续发展，你这个老大想当的<code>省力</code>，你的团队有能力梯队，如果大家能力都很一样，你要重点培养，加以激励或从外面招聘也要有梯队。重要性，自己看吧。</p><p>总结下，自己有感而发，我平常干的啥啊：</p><ol><li>规划<ol><li>部门职能规划</li><li>部门目标、月度目标规划</li><li>团队规划，就是你要一个什么样的团队</li></ol></li><li>团建<ol><li>团队文化</li><li>能力梯队</li><li>协作沟通</li><li>职责分工</li><li>绩效激励</li></ol></li><li>任务<ol><li>重要紧急&gt;紧急不重要&gt;重要不紧急&gt;不紧急不重要，哈哈这不是废话吗？</li><li>执行，领导的任务，明确好了重在执行</li></ol></li></ol><p>除了上面一点还有一个最重要是：<code>流程制度和规范</code>。从部门到公司，部门的好理解，如果你有机会从公司层面制定规范和制定，那请你珍惜加油吧。</p><p>好了，今天扯那么多，下班~</p>]]></content>
-    
-    <summary type="html">
-    
-      前一段时间很忙，没有静下来去思考。人啊，一旦忙碌起来，他的思考能力就会受限制。这样很不好，如果你感觉很忙。这段时间你要注意了，特别是你在带一个团队的时候。
-    
-    </summary>
-    
-    
-      <category term="管理" scheme="https://neilli.cn/categories/%E7%AE%A1%E7%90%86/"/>
-    
-    
-      <category term="管理" scheme="https://neilli.cn/tags/%E7%AE%A1%E7%90%86/"/>
-    
-      <category term="思考" scheme="https://neilli.cn/tags/%E6%80%9D%E8%80%83/"/>
     
   </entry>
   
