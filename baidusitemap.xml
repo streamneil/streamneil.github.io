@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://neilli.cn/2021/09/27/summary-9/</loc>
+    <lastmod>2021-09-27</lastmod>
+  </url>
+  <url>
+    <loc>https://neilli.cn/2021/09/01/summary-8/</loc>
+    <lastmod>2021-09-27</lastmod>
+  </url>
+  <url>
+    <loc>https://neilli.cn/2019/12/17/corejava-6-map/</loc>
+    <lastmod>2021-08-30</lastmod>
+  </url>
+  <url>
     <loc>https://neilli.cn/2021/08/11/weapp-hcj/</loc>
     <lastmod>2021-08-17</lastmod>
   </url>
@@ -119,10 +131,6 @@
   <url>
     <loc>https://neilli.cn/2019/12/22/corejava-7-concurrent/</loc>
     <lastmod>2020-04-21</lastmod>
-  </url>
-  <url>
-    <loc>https://neilli.cn/2019/12/17/corejava-6-map/</loc>
-    <lastmod>2019-12-31</lastmod>
   </url>
   <url>
     <loc>https://neilli.cn/2019/12/16/corejava-5-list/</loc>
